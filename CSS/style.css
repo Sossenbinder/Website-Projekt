@@ -1,3 +1,7 @@
+*{
+  font-family: Century Gothic, sans-serif;
+}
+
 html,body
 {
     width: 100%;
@@ -5,6 +9,36 @@ html,body
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
+}
+
+.facebookTag{
+  height: 20px;
+  width: 30px;
+
+  background: grey;
+  position: absolute;
+  top: 0%;
+  right: 0.228%;
+}
+
+.googleplusTag{
+  height: 20px;
+  width: 30px;
+
+  background: red;
+  position: absolute;
+  top: 30%;
+  right: 0.2%;
+}
+
+.twitterTag{
+  height: 20px;
+  width: 30px;
+
+  background: lightblue;
+  position: absolute;
+  top: 60%;
+  right: 0.2%;
 }
 
 .topMenu{
