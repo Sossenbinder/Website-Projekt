@@ -1,5 +1,5 @@
 *{
-  font-family: Century Gothic, sans-serif;
+  font-family: Baskerville, "Baskerville Old Face", "Goudy Old Style", Garamond, "Times New Roman", serif;
 }
 
 html,body
@@ -76,7 +76,7 @@ html,body
   position: absolute;
 
   left: 5%;
-  top: 2%;
+  top: 0%;
   right: 5%;
 
   height: 1000px;
@@ -144,7 +144,7 @@ html,body
 }
 
 .menuElement:hover{
-  background-color: white;
+  background-color: gold;
 }
 
 .menuElement:active{
