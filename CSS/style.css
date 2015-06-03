@@ -13,9 +13,10 @@ html,body
 
 .facebookTag{
   height: 20px;
-  width: 30px;
+  width: 25px;
 
-  background: grey;
+  background-image: url("../Resources/Pictures/fb-icon.png");
+  background-repeat: none;
   position: absolute;
   top: 0%;
   right: 0.228%;
@@ -23,9 +24,10 @@ html,body
 
 .googleplusTag{
   height: 20px;
-  width: 30px;
+  width: 25px;
 
-  background: red;
+  background-image: url("../Resources/Pictures/g+icon.png");
+  background-repeat: none;
   position: absolute;
   top: 30%;
   right: 0.2%;
@@ -33,9 +35,10 @@ html,body
 
 .twitterTag{
   height: 20px;
-  width: 30px;
+  width: 25px;
 
-  background: lightblue;
+  background-image: url("../Resources/Pictures/twitter-icon.png");
+  background-repeat: none;
   position: absolute;
   top: 60%;
   right: 0.2%;
@@ -144,10 +147,14 @@ html,body
 }
 
 .menuElement:hover{
-  background-color: gold;
+  background-color: #FFFF66;
 }
 
 .menuElement:active{
+  color: #141414;
+}
+
+.menuElement:visited{
   color: #141414;
 }
 
