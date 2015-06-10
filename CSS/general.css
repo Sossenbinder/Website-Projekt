@@ -153,7 +153,7 @@ html,body
 }
 
 .menuElement:hover{
-  background-color: #FFFF66;
+  background-color: rgba(244, 244, 0, 0.3);
 }
 
 .menuElement:active{
