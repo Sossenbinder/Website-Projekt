@@ -20,7 +20,7 @@
           } else {
             $page = $_GET['page'];
             switch($page) {
-              case 'produkte': 
+              case 'produkte':
                     include('produkte.php');
                     break;
               case 'kunden':
@@ -35,6 +35,12 @@
               case 'steinwayK132':
                     include('steinwayK132.php');
                     break;
+              case 'fluegelP3201':
+                    include('fluegelP3201.php');
+                    break;
+              case 'spinettZenti':
+                    include('spinettZenti.php');
+                    break;
               default:
                     include('home.php');
             }
@@ -43,7 +49,7 @@
       </div>
       <div class="footer">
           <!-- footer -->
-      </div>  
+      </div>
     </div>
   </body>
 </html>

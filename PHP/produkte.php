@@ -1,4 +1,3 @@
-
 <div class="siteContent">
 
   <div style="margin-top:20px" class="product">
@@ -11,7 +10,7 @@
           Mit einer H&oumlhe von 132cm, einer Breite von 152,5cm und einem Gewicht von 305kg bietet sich dieses Piano vor allem f&uumlr beschr&aumlnkt gro&szlige Wohnungen an.
       </p>
     </div>
-    <a href="steinwayK132.html" class="productInformation"><span><i>Mehr Informationen zu diesem Produkt</i></span></a>
+    <a href="index.php?page=steinwayK132" class="productInformation"><span><i>Mehr Informationen zu diesem Produkt</i></span></a>
     <img src="../Resources/Pianos/steinwayK132.png" alt="Konnte nicht geladen werden">
   </div>
 
@@ -26,7 +25,7 @@
           Lassen sie sich vom P3201 begeistern und vereinbaren Sie einen Termin zum Probespielen.
       </p>
     </div>
-    <a href="steinwayK132.html" class="productInformation"><span><i>Mehr Informationen zu diesem Produkt</i></span></a>
+    <a href="index.php?page=fluegelP3201" class="productInformation"><span><i>Mehr Informationen zu diesem Produkt</i></span></a>
     <img src="../Resources/Pianos/Fluegel.png" alt="Konnte nicht geladen werden">
   </div>
 
@@ -46,7 +45,7 @@
         noch immer aktuell und gefragt.
       </p>
     </div>
-    <a href="steinwayK132.html" class="productInformation"><span><i>Mehr Informationen zu diesem Produkt</i></span></a>
+    <a href="index.php?page=spinettZenti" class="productInformation"><span><i>Mehr Informationen zu diesem Produkt</i></span></a>
     <img src="../Resources/Pianos/Spinett.png" alt="Konnte nicht geladen werden">
   </div>
 
