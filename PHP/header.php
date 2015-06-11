@@ -11,9 +11,9 @@
 </div>
 
 <div class="menu">
-  <a href="home.php" class="menuElement"> <span>Home</span>  </a>
-  <a href="produkte.php" class="menuElement menuElementTwo"> <span>Produkte</span> </a>
-  <a href="kunden.php" class="menuElement menuElementThree"> <span>Kunden</span> </a>
-  <a href="kontakte.php" class="menuElement menuElementFour"> <span>Kontakt</span> </a>
-  <a href="impressum.php" class="menuElement menuElementFive"> <span>Impressum</span> </a>
+  <a href="?page=home" class="menuElement"> <span>Home</span>  </a>
+  <a href="?page=produkte" class="menuElement menuElementTwo"> <span>Produkte</span> </a>
+  <a href="?page=kunden" class="menuElement menuElementThree"> <span>Kunden</span> </a>
+  <a href="?page=kontakt" class="menuElement menuElementFour"> <span>Kontakt</span> </a>
+  <a href="?page=impressum" class="menuElement menuElementFive"> <span>Impressum</span> </a>
 </div>
