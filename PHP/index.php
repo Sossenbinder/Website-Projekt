@@ -2,6 +2,7 @@
   <head>
     <title>Klaviermanufaktur Lorentz</title>
     <link rel="stylesheet" type="text/css" href="../CSS/general.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/produkte.css">
   </head>
 
   <body>

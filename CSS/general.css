@@ -189,4 +189,9 @@ html,body
   left: calc(80% + 4px);
 }
 
+.siteContent{
+
+  height: auto;
+}
+
 /*Generelles Ende*/
