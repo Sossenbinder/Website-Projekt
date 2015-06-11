@@ -15,33 +15,37 @@ html,body
 /*Generelles, das auf jeder Seite zu sehen sein sollte */
 
 .facebookTag{
-  height: 20px;
+  height: 25px;
   width: 25px;
 
-  background-image: url("../Resources/Pictures/fb-icon.png");
-  background-repeat: none;
+  background-image: url("../Resources/Pictures/fb.png");
+  background-repeat: no-repeat;
+  background-size: 25px 25px;
   position: absolute;
   top: 15%;
   right: 0.428%;
 }
 
 .googleplusTag{
-  height: 20px;
+  height: 25px;
   width: 25px;
 
-  background-image: url("../Resources/Pictures/g+icon.png");
-  background-repeat: none;
+  background-image: url("../Resources/Pictures/g+.png");
+  background-repeat: no-repeat;
+  background-size: 25px 25px;
+
   position: absolute;
   top: 42.5%;
   right: 0.4%;
 }
 
 .twitterTag{
-  height: 20px;
+  height: 25px;
   width: 25px;
 
-  background-image: url("../Resources/Pictures/twitter-icon.png");
-  background-repeat: none;
+  background-image: url("../Resources/Pictures/twitter.png");
+  background-repeat: no-repeat;
+  background-size: 25px 25px;
   position: absolute;
   top: 70%;
   right: 0.4%;
