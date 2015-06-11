@@ -21,8 +21,8 @@ html,body
   background-image: url("../Resources/Pictures/fb-icon.png");
   background-repeat: none;
   position: absolute;
-  top: 0%;
-  right: 0.228%;
+  top: 15%;
+  right: 0.428%;
 }
 
 .googleplusTag{
@@ -32,8 +32,8 @@ html,body
   background-image: url("../Resources/Pictures/g+icon.png");
   background-repeat: none;
   position: absolute;
-  top: 30%;
-  right: 0.2%;
+  top: 42.5%;
+  right: 0.4%;
 }
 
 .twitterTag{
@@ -43,8 +43,8 @@ html,body
   background-image: url("../Resources/Pictures/twitter-icon.png");
   background-repeat: none;
   position: absolute;
-  top: 60%;
-  right: 0.2%;
+  top: 70%;
+  right: 0.4%;
 }
 
 .topMenu{
