@@ -31,6 +31,9 @@
               case 'impressum':
                     include('impressum.php');
                     break;
+              case 'steinwayK132':
+                    include('steinwayK132.php');
+                    break;
               default:
                     include('home.php');
             }

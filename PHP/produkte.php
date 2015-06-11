@@ -11,7 +11,7 @@
               Mit einer H&oumlhe von 132cm, einer Breite von 152,5cm und einem Gewicht von 305kg bietet sich dieses Piano vor allem f&uumlr beschr&aumlnkt gro&szlige Wohnungen an.
           </p>
         </div>
-        <a href="steinwayK132.html" class="productInformation"><span><i>Mehr Informationen zu diesem Produkt</i></span></a>
+        <a href="?page=steinwayK132" class="productInformation"><span><i>Mehr Informationen zu diesem Produkt</i></span></a>
         <img src="../Resources/Pianos/steinwayK132.png" alt="Konnte nicht geladen werden">
       </div>
 
@@ -26,7 +26,7 @@
               Lassen sie sich vom P3201 begeistern und vereinbaren Sie einen Termin zum Probespielen.
           </p>
         </div>
-        <a href="steinwayK132.html" class="productInformation"><span><i>Mehr Informationen zu diesem Produkt</i></span></a>
+        <a href="?page=steinwayK132" class="productInformation"><span><i>Mehr Informationen zu diesem Produkt</i></span></a>
         <img src="../Resources/Pianos/steinwayK132.png" alt="Konnte nicht geladen werden">
       </div>
 
@@ -36,7 +36,7 @@
           <p class="productDescription"> Produkt 3
           </p>
         </div>
-        <a href="steinwayK132.html" class="productInformation"><span><i>Mehr Informationen zu diesem Produkt</i></span></a>
+        <a href="?page=steinwayK132" class="productInformation"><span><i>Mehr Informationen zu diesem Produkt</i></span></a>
         <img src="../Resources/Pianos/steinwayK132.png" alt="Konnte nicht geladen werden">
       </div>
 
@@ -46,7 +46,7 @@
           <p class="productDescription"> Produkt 4
           </p>
         </div>
-        <a href="steinwayK132.html" class="productInformation"><span><i>Mehr Informationen zu diesem Produkt</i></span></a>
+        <a href="?page=steinwayK132" class="productInformation"><span><i>Mehr Informationen zu diesem Produkt</i></span></a>
         <img src="../Resources/Pianos/steinwayK132.png" alt="Konnte nicht geladen werden">
       </div>
 
@@ -56,7 +56,7 @@
           <p class="productDescription"> Produkt 5
           </p>
         </div>
-        <a href="steinwayK132.html" class="productInformation"><span><i>Mehr Informationen zu diesem Produkt</i></span></a>
+        <a href="?page=steinwayK132" class="productInformation"><span><i>Mehr Informationen zu diesem Produkt</i></span></a>
         <img src="../Resources/Pianos/steinwayK132.png" alt="Konnte nicht geladen werden">
       </div>
 
