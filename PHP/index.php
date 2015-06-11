@@ -7,10 +7,11 @@
 
   <body>
     <div class="wrapper">
-      
-      <?php
-        include('header.php');
-      ?>
+      <div class="header">
+        <?php
+          include('header.php');
+        ?>
+      </div>
 
       <div class="contentParent">
         <?php
@@ -41,8 +42,8 @@
         ?>
       </div>
       <div class="footer">
-        <!-- footer -->
-      </div>
+          <!-- footer -->
+      </div>  
     </div>
   </body>
 </html>

@@ -5,12 +5,39 @@
 html,body
 {
     width: 100%;
-    height: 100%;
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
 }
 
+.wrapper {
+  height:100%;
+  width:100%;
+}
+
+.header {
+  width:100%;
+  height:25%;
+  position: fixed;
+  top: 0;
+}
+
+.contentParent{
+  overflow: visible;
+  overflow-x: hidden;
+  position: absolute;
+  top: 25%;
+
+  background: #E6E6E6;
+
+  width: 100%;
+  min-height: 75%;
+
+}
+
+.footer {
+  /*ans Ende irgendwie...*/
+}
 
 /*Generelles, das auf jeder Seite zu sehen sein sollte */
 
@@ -64,23 +91,11 @@ html,body
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
 
   width:100%;
-  height:120px;
+  height:calc(99% - 30px);
 
   position: relative;
 }
 
-.contentParent{
-  overflow: scroll;
-  overflow-x: hidden;
-  position: absolute;
-
-  background: #E6E6E6;
-
-  top: 152px;
-  width: 100%;
-  height: calc(100% - 112px);
-
-}
 
 .siteContent{
   position: absolute;

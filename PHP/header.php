@@ -3,7 +3,7 @@
     <span class="companyFont">Klaviermanufaktur Lorentz</span>
   </div> -->
   <div class="logoImage">
-    <a href="home.php"><img src="../Resources/Pictures/logo.png"></a>
+    <a href="?page=home"><img src="../Resources/Pictures/logo.png"></a>
   </div>
   <a href="http://www.facebook.com" id="facebookTag" class="facebookTag"></a>
   <a href="https://plus.google.com/u/0/112766873149357913973/posts" id="googleplusTag" class="googleplusTag"></a>
