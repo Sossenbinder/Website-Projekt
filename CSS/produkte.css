@@ -12,7 +12,7 @@
   -moz-box-shadow: 1px -1px 20px -1px rgba(0,0,0,0.75);
   box-shadow: 1px -1px 20px -1px rgba(0,0,0,0.75);
 
-  background: grey;
+  background: gray;
   width: 95%;
   margin-bottom: 20px;
 }
@@ -70,7 +70,7 @@
   position: relative;
   top: 20%;
   left: 8%;
-  color: lightgrey;
+  color: gray;
 }
 
 .productInformation:visited{
