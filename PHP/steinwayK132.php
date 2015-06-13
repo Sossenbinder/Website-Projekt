@@ -11,10 +11,10 @@
       <p>Ein Steinway Fl&uuml;gel besteht aus mehr als 12.000 Einzelteilen. Kein Steinway gleicht dem anderen. Dieses liegt zum einen an dem hohen Anteil an Handarbeit, dem Know-how ihrer Mitarbeiter und dem Einsatz bester Materialien, zum anderen aber auch an der Arbeit des Intoneurs, der jedem Instrument seinen ganz eigenen klanglichen Charakter verleiht. Gewissenhaft bearbeitet er jeden einzelnen Hammerkopf, bis sich der unnachahmliche Klang eines Steinway frei entfalten kann. Auf dieser Reise durch die Handwerkskunst entsteht das, was Steinway &amp; Sons seit &uuml;ber 160 Jahren auszeichnet &ndash; Instrumente mit Charakter!</p>
 
     </div>
-    <div class="productPictureDiv">
+    <div class="productPictureDivSteinway">
       <img src="../Resources/Pianos/steinwayK132.png" width="300" height="300" alt="Konnte nicht geladen werden">
-      <a class="orderButton" href="index.php?page=kontakt&type=productoffer"><span class="orderButtonSpan">Bestellanfrage</span></a>
-      <table class="dataTable">
+      <a class="orderButtonSteinway" href="index.php?page=kontakt&type=productoffer"><span class="orderButtonSpanSteinway">Bestellanfrage</span></a>
+      <table class="dataTableSteinway">
         <tr>
           <td colspan="2" style="text-align: center; font-size: 20px"><u><strong>Klavierdaten</strong></u></td>
         </tr>

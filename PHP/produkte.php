@@ -59,7 +59,7 @@
       <p> Produkt 4
       </p>
     </div>
-    <a href="steinwayK132.html" class="productInformation"><span><i>Mehr Informationen zu diesem Produkt</i></span></a>
+    <a class="productInformation"><span><i>Mehr Informationen zu diesem Produkt</i></span></a>
     <img src="../Resources/Pianos/steinwayK132.png" alt="Konnte nicht geladen werden">
   </div>
 
@@ -69,7 +69,7 @@
       <p> Produkt 5
       </p>
     </div>
-    <a href="steinwayK132.html" class="productInformation"><span><i>Mehr Informationen zu diesem Produkt</i></span></a>
+    <a class="productInformation"><span><i>Mehr Informationen zu diesem Produkt</i></span></a>
     <img src="../Resources/Pianos/steinwayK132.png" alt="Konnte nicht geladen werden">
   </div>
 

@@ -4,12 +4,22 @@
   left: calc(2.5% - 3px);
 }
 
-.productPictureDiv{
+.productPictureDivSteinway{
 
   position: absolute;
   right: 5%;
   top: 25px;
   height: 300px;
+
+  border: 1px ridge black;
+}
+
+.productPictureDivZenti{
+
+  position: absolute;
+  right: 5%;
+  top: 25px;
+  height: 194px;
 
   border: 1px ridge black;
 }
@@ -23,31 +33,38 @@
   width: calc(100% - 400px - 50px);
 }
 
-.dataTable{
+.dataTableSteinway{
   position: absolute;
 
   top: 105%;
   width: 302px;
 }
 
-.dataTable table{
+.dataTableZenti{
+  position: absolute;
+
+  top: 105%;
+  width: 258px;
+}
+
+table{
 
   background: #CCCCCC;
   border: 1px solid black;
 }
 
-.dataTable td{
+td{
 
   background: #CCCCCC;
   border: 1px solid black;
 }
 
-.dataTable tr{
+tr{
 
   background: #CCCCCC;
 }
 
-.orderButton{
+.orderButtonSteinway{
 
   position: absolute;
   cursor: pointer;
@@ -70,16 +87,55 @@
   height: 40px;
 }
 
-.orderButton:active{
+.orderButtonZenti{
+
+  position: absolute;
+  cursor: pointer;
+
+  background: rgb(102,102,102); /* Old browsers */
+  background: -moz-linear-gradient(-45deg,  rgba(102,102,102,1) 75%, rgba(89,89,89,1) 88%, rgba(76,76,76,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(75%,rgba(102,102,102,1)), color-stop(88%,rgba(89,89,89,1)), color-stop(100%,rgba(76,76,76,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg,  rgba(102,102,102,1) 75%,rgba(89,89,89,1) 88%,rgba(76,76,76,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg,  rgba(102,102,102,1) 75%,rgba(89,89,89,1) 88%,rgba(76,76,76,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg,  rgba(102,102,102,1) 75%,rgba(89,89,89,1) 88%,rgba(76,76,76,1) 100%); /* IE10+ */
+  background: linear-gradient(135deg,  rgba(102,102,102,1) 75%,rgba(89,89,89,1) 88%,rgba(76,76,76,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666666', endColorstr='#4c4c4c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+  outline: none;
+  border: 1px ridge black;
+  border-radius: 4px;
+
+  top: 180%;
+  width: 256px;
+  height: 40px;
+}
+
+.orderButtonSteinway:active{
 
   top: calc(150% + 1px);
 }
 
-.orderButtonSpan{
+.orderButtonZenti:active{
+
+  top: calc(180% + 1px);
+}
+
+.orderButtonSpanSteinway{
 
   position: absolute;
   top: 12%;
   left: 27%;
+  text-align: center;
+
+  color: lightgrey;
+  font-size: 26px;
+}
+
+.orderButtonSpanZenti{
+
+  position: absolute;
+  top: 12%;
+  left: 24%;
   text-align: center;
 
   color: lightgrey;
