@@ -2,6 +2,7 @@
 /*Produkte Start*/
 
 .product{
+
   position: relative;
   top: 2%;
   left: calc(2.5% - 3px);
@@ -31,6 +32,7 @@
 
 
 .productTextDiv{
+
   position: relative;
   left: 2%;
 
@@ -66,17 +68,30 @@
   margin-bottom: 5px;
 }
 
+.productInformation:active{
+
+  top: 1px;
+}
+
 .productInformation span{
+
   position: relative;
   top: 20%;
   left: 8%;
-  color: gray;
-}
-
-.productInformation:visited{
   color: white;
 }
 
+.productInformation:visited{
+
+  color: white;
+}
+
+.subsiteInformation{
+
+  position: relative;
+  left: 3%;
+
+  font-size: 18px;
+}
+
 /*Produkte Ende*/
-
-

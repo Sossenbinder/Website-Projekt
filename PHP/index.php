@@ -52,5 +52,6 @@
           <!-- footer -->
       </div>
     </div>
+    <script language="javascript" type="text/javascript" src="../JS/autoResize.js"></script>
   </body>
 </html>

@@ -96,7 +96,6 @@ html,body
   position: relative;
 }
 
-
 .siteContent{
   position: absolute;
 
@@ -104,13 +103,10 @@ html,body
   top: 0%;
   right: 5%;
 
-  height: 1000px;
+  height: auto;
 
   background: #A59991;
 }
-
-
-
 
 .companyFontDiv{
 
@@ -206,11 +202,6 @@ html,body
 .menuElementFive{
   border-right: none;
   left: calc(80% + 4px);
-}
-
-.siteContent{
-
-  height: auto;
 }
 
 /*Generelles Ende*/
