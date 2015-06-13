@@ -37,7 +37,7 @@
                     include('steinwayK132.php');
                     break;
               case 'fluegelP3201':
-                    include('fluegelP3201.php');
+                    include('fluegelD274.php');
                     break;
               case 'spinettZenti':
                     include('spinettZenti.php');

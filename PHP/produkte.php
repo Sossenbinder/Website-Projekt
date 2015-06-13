@@ -21,12 +21,11 @@
 
   <div class="product">
     <div class="productTextDiv">
-      <h1><u>Konzertfl&uumlgel P3201:</u></h1>
-      <p> Der Konzertfl&uumlgel P3201 vereint h&oumlchste Anspr&uumlche an Klanqualit&aumlt und Design und ist f&uumlr den professionellen Einsatz geeignet.<br>
+      <h1><u>Konzertfl&uumlgel D-274:</u></h1>
+      <p> Der Konzertfl&uumlgel D-274 vereint h&oumlchste Anspr&uumlche an Klanqualit&aumlt und Design und ist f&uumlr den professionellen Einsatz geeignet.<br>
           Er &uumlberzeugt durch seinen einzigartig vollen Klang und begeistert durch die handwerklich meisterliche Verarbeitung mit viel Liebe zum Detail.<br><br>
           Um den einzigartigen Klang zu erzeugen, wird eine breite Palette von H&oumllzern auf Qualit&aumlt und Charakter untersucht, bevor dann die besten Materialien f&uumlr ihre jeweilige Aufgabe ausgesucht werden.
           Das Holz des Resonanzbodens hat den gr&ouml&szligten Einfluss auf den Klang eines Fl&uumlgels. Daher werden diese H&oumllzer nach strengen Regeln und Normen von den erfahrensten Handwerkern ausgew&aumlhlt, um sowohl satte, tiefe B&aumlsse als auch brillante anhaltende T&oumlne in hohen Tonlagen zu erreichen.<br>
-          Lassen sie sich vom P3201 begeistern und vereinbaren Sie einen Termin zum Probespielen.
       </p>
     </div>
     <a href="index.php?page=fluegelP3201" class="productInformation"><span><i>Mehr Informationen zu diesem Produkt</i></span></a>
