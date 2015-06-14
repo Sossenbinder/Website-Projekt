@@ -46,7 +46,7 @@ if ($_POST["kf-km"]) {
   $betreff        = $_POST["betreff"];
   $nachricht      = $_POST["nachricht"];
   $date           = date("d.m.Y | H:i");
-  $ip             = $_SERVER['REMOTE_ADDR']; 
+  $ip             = $_SERVER['REMOTE_ADDR'];
   $UserAgent      = $_SERVER["HTTP_USER_AGENT"];
   $host           = getHostByAddr($remote);
 
@@ -56,7 +56,7 @@ if ($_POST["kf-km"]) {
   $email          = stripslashes($email);
   $betreff        = stripslashes($betreff);
   $nachricht      = stripslashes($nachricht);
- 
+
 if (isset($anrede) && $anrede == "0") {
   $fehler['anrede'] = "<font color=#cc3333>Bitte w&auml;hlen Sie eine <strong>Anrede</strong> aus.<br /></font>";
 }
@@ -84,7 +84,7 @@ if (!preg_match("/^[0-9a-zA-ZÄÜÖ_.-]+@[0-9a-z.-]+\.[a-z]{2,6}$/", $email)) {
 if(!$betreff) {
  $fehler['betreff'] = '<font color=#cc3333>Bitte waehlen Sie einen <strong>Betreff</strong>.<br /></font>';
 }
- 
+
 if(!$nachricht) {
  $fehler['nachricht'] = '<font color=#cc3333>Geben Sie bitte eine <strong>Nachricht</strong> ein.<br /></font>';
 }
@@ -178,7 +178,7 @@ if (!isset($fehler) || count($fehler) == 0) {
               }
               else {
           if ($cfg['UPLOAD_ACTIVE']) {
-                     move_uploaded_file($_FILES['f']['tmp_name'][$i], $cfg['UPLOAD_FOLDER'].'/'.$_FILES['f']['name'][$i]);  
+                     move_uploaded_file($_FILES['f']['tmp_name'][$i], $cfg['UPLOAD_FOLDER'].'/'.$_FILES['f']['name'][$i]);
           }
                   $uploadedFiles[] = $_FILES['f']['name'][$i];
               }
@@ -215,9 +215,9 @@ if (!isset($fehler) || count($fehler) == 0) {
 	$mailheaders[] = "From: =?UTF-8?B?".base64_encode(stripslashes($_POST["vorname"])." ".stripslashes($_POST["name"]))."?= <".$_POST["email"].">";
 	$mailheaders[] = "Reply-To: <".$_POST["email"].">";
 	$mailheaders[] = "Subject: ".$mailheader_betreff;
-	$mailheaders[] = "X-Mailer: PHP/".phpversion();		
+	$mailheaders[] = "X-Mailer: PHP/".phpversion();
 
-   
+
 
 
    $msg  = "Folgendes wurde am ". $date ." Uhr per Formular geschickt:\n" . "-------------------------------------------------------------------------\n\n";
@@ -245,13 +245,13 @@ $msg .= "Nachricht:\n" . $_POST['nachricht'] = preg_replace("/\r\r|\r\n|\n\r|\n\
   $msg .= "\n\nIP Adresse: " . $ip . "\n";
   $msg = strip_tags ($msg);
 
-   
+
 	//$mailheaders = "From: \"".stripslashes($_POST["vorname"])." ".stripslashes($_POST["name"])."\" <".$_POST["email"].">\n";
 	//$mailheaders .= "Reply-To: <".$_POST["email"].">\n";
 	//$mailheaders .= "X-Mailer: PHP/" . phpversion() . "\n";
 	$mailheader_betreff = "=?UTF-8?B?".base64_encode($betreff)."?=";
 	$mailheaders   = array();
-   
+
 
 	if (!$cfg['UPLOAD_ACTIVE'] && count($uploadedFiles) > 0) {
 		$attachments = array();
@@ -262,16 +262,16 @@ $msg .= "Nachricht:\n" . $_POST['nachricht'] = preg_replace("/\r\r|\r\n|\n\r|\n\
 			$attachments[] = $_FILES['f']['tmp_name'][$i];
 		}
 		$boundary = md5(uniqid(rand(), true));
-		
-		
+
+
 		// allgemeiner Header
 		$mailheaders[] = "MIME-Version: 1.0";
 		$mailheaders[] = "Content-type: multipart/mixed; boundary=\"".$boundary."\"";
 		$mailheaders[] = "From: =?UTF-8?B?".base64_encode(stripslashes($_POST["vorname"])." ".stripslashes($_POST["name"]))."?= <".$_POST["email"].">";
 		$mailheaders[] = "Reply-To: <".$_POST["email"].">";
 		$mailheaders[] = "Subject: ".$mailheader_betreff;
-		$mailheaders[] = "X-Mailer: PHP/".phpversion();	
-		
+		$mailheaders[] = "X-Mailer: PHP/".phpversion();
+
 		// Nachricht
 		$mailheaders[] = "--".$boundary;
 		$mailheaders[] = "Content-type: text/plain; charset=utf-8";
@@ -279,7 +279,7 @@ $msg .= "Nachricht:\n" . $_POST['nachricht'] = preg_replace("/\r\r|\r\n|\n\r|\n\
 		$mailheaders[] = "Folgendes wurde am ". $date ." Uhr per Formular geschickt:\n";
 		$mailheaders[] = $msg;
 		$mailheaders[] = "";
-		
+
 		// Anhänge
 		for ($i = 0; $i < count($uploadedFiles); $i++) {
 			$file = fopen($attachments[$i],"r");
@@ -287,7 +287,7 @@ $msg .= "Nachricht:\n" . $_POST['nachricht'] = preg_replace("/\r\r|\r\n|\n\r|\n\
 			fclose($file);
 			$encodedfile = chunk_split(base64_encode($content));
 			$mailheaders[] = "--".$boundary;
-			$mailheaders[] = "Content-Disposition: attachment; filename=\"".$uploadedFiles[$i]."\"";		
+			$mailheaders[] = "Content-Disposition: attachment; filename=\"".$uploadedFiles[$i]."\"";
 			$mailheaders[] = "Content-Type: application/octet-stream; name=\"".$uploadedFiles[$i]."\"";
 			$mailheaders[] = "Content-Transfer-Encoding: base64";
 			$mailheaders[] = "";
@@ -301,13 +301,13 @@ $msg .= "Nachricht:\n" . $_POST['nachricht'] = preg_replace("/\r\r|\r\n|\n\r|\n\
 		$mailheaders[] = "From: =?UTF-8?B?".base64_encode(stripslashes($_POST["vorname"])." ".stripslashes($_POST["name"]))."?= <".$_POST["email"].">";
 		$mailheaders[] = "Reply-To: <".$_POST["email"].">";
 		$mailheaders[] = "Subject: ".$mailheader_betreff;
-		$mailheaders[] = "X-Mailer: PHP/".phpversion();		
+		$mailheaders[] = "X-Mailer: PHP/".phpversion();
 	}
 
 
-   
 
-	$dsubject = "Ihre Anfrage";  
+
+	$dsubject = "Ihre Anfrage";
 	//$dmailheaders = "From: ".$ihrname." <".$recipient.">\n";
 	//$dmailheaders .= "Reply-To: <".$recipient.">\n";
 	$dmailheader_dsubject = "=?UTF-8?B?".base64_encode($dsubject)."?=";
@@ -317,7 +317,7 @@ $msg .= "Nachricht:\n" . $_POST['nachricht'] = preg_replace("/\r\r|\r\n|\n\r|\n\
 	$dmailheaders[] = "From: =?UTF-8?B?".base64_encode($ihrname)."?= <".$recipient.">";
 	$dmailheaders[] = "Reply-To: <".$recipient.">";
 	$dmailheaders[] = "Subject: ".$dmailheader_dsubject;
-	$dmailheaders[] = "X-Mailer: PHP/".phpversion();		
+	$dmailheaders[] = "X-Mailer: PHP/".phpversion();
 
    $dmsg  = "Vielen Dank für Ihre E-Mail. Wir werden schnellstmöglich darauf antworten.\n\n";
    $dmsg .= "Zusammenfassung: \n" .
@@ -328,7 +328,7 @@ $dmsg .= "E-Mail: " . $email . "\n";
 $dmsg .= "Telefon: " . $telefon . "\n";
 $dmsg .= "\nBetreff: " . $betreff . "\n";
 $dmsg .= "Nachricht:\n" . str_replace("\r", "", $nachricht) . "\n\n";
-   
+
    if (count($uploadedFiles) > 0) {
        $dmsg .= 'Sie haben folgende Dateien übertragen:'."\n";
        foreach ($uploadedFiles as $file) {
@@ -346,14 +346,14 @@ mail($email, $dmailheader_dsubject, $dmsg, implode("\n", $dmailheaders));
 
 echo "<META HTTP-EQUIV=\"refresh\" content=\"0;URL=".$danke."\">";
 exit;
- 
+
 }
 }
 }
 
 ?>
 
-  
+
 
 
 <div class="kontaktformular">
@@ -368,7 +368,7 @@ exit;
       <table>
 		    <tr>
           <td class="label"><label>Anrede: <span class="pflichtfeld">*</span></label></td>
-          <td class="field"> 
+          <td class="field">
             <?php if ($fehler["anrede"] != "") { echo $fehler["anrede"]; } ?>
             <select style="width: 100px;" name="anrede" <?php if ($fehler["anrede"] != "") { echo 'class="errordesignfields"'; } ?>>
               <option selected="selected" value="0"></option>
@@ -381,16 +381,16 @@ exit;
 		    <tr>
 		      <td class="label"><label>Vorname: <span class="pflichtfeld">*</span></label></td>
           <td class="field"><?php if ($fehler["vorname"] != "") { echo $fehler["vorname"];} ?>
-            <input type="text" name="vorname" maxlength="<?php echo $zeichenlaenge_vorname; ?>" value="<?php echo $_POST[vorname]; ?>"  
+            <input type="text" name="vorname" maxlength="<?php echo $zeichenlaenge_vorname; ?>" value="<?php echo $_POST[vorname]; ?>"
             <?php if($fehler["vorname"] != "") {echo 'class="errordesignfields"';} ?>/>
           </td>
 		    </tr>
 
 		    <tr>
           <td class="label"><label>Nachname: <span class="pflichtfeld">*</span></label></td>
-          <td class="field"> 
+          <td class="field">
             <?php if($fehler["name"] != "") { echo $fehler["name"];} ?>
-            <input type="text" name="name" maxlength="<?php echo $zeichenlaenge_name; ?>" id="textfield" value="<?php echo $_POST[name]; ?>"  
+            <input type="text" name="name" maxlength="<?php echo $zeichenlaenge_name; ?>" id="textfield" value="<?php echo $_POST[name]; ?>"
             <?php if ($fehler["name"] != "") { echo 'class="errordesignfields"'; } ?>/>
           </td>
 		    </tr>
@@ -399,7 +399,7 @@ exit;
           <td class="label"><label>Adresse: <span class="pflichtfeld">*</span></label></td>
           <td class="field">
             <?php if ($fehler["adresse"] != "") { echo $fehler["adresse"]; } ?>
-            <input type="text" name="adresse" maxlength="<?php echo $zeichenlaenge_email; ?>" value="<?php echo $_POST[adresse]; ?>"  
+            <input type="text" name="adresse" maxlength="<?php echo $zeichenlaenge_email; ?>" value="<?php echo $_POST[adresse]; ?>"
             <?php if ($fehler["adresse"] != "") { echo 'class="errordesignfields"'; } ?>/></td>
         </tr>
 
@@ -407,9 +407,9 @@ exit;
           <td class="label"><label>PLZ / Ort: <span class="pflichtfeld">*</span></label></td>
           <td class="field">
             <?php if ($fehler["ortplz"] != "") { echo $fehler["ortplz"]; } ?>
-            <input type="text" name="ortplz" maxlength="<?php echo $zeichenlaenge_ortplz; ?>" value="<?php echo $_POST[ortplz]; ?>"  
+            <input type="text" name="ortplz" maxlength="<?php echo $zeichenlaenge_ortplz; ?>" value="<?php echo $_POST[ortplz]; ?>"
             <?php if ($fehler["ortplz"] != "") { echo 'class="errordesignfields"'; } ?>/></td>
-        </tr>  
+        </tr>
 
         <tr>
           <td class="label"><label>Telefon: <span class="pflichtfeld">*</span></label></td>
@@ -418,13 +418,13 @@ exit;
             <input type="text" name="telefon" maxlength="<?php echo $zeichenlaenge_telefon; ?>" value="<?php echo $_POST[telefon]; ?>"
             <?php if ($fehler["telefon"] != "") { echo 'class="errordesignfields"'; } ?>/></td>
           </td>
-        </tr>  
+        </tr>
 
     		<tr>
     			<td class="label"><label>E-Mail: <span class="pflichtfeld">*</span></label></td>
     			<td class="field">
             <?php if ($fehler["email"] != "") { echo $fehler["email"]; } ?>
-            <input type="text" name="email" maxlength="<?php echo $zeichenlaenge_email; ?>" value="<?php echo $_POST[email]; ?>"  
+            <input type="text" name="email" maxlength="<?php echo $zeichenlaenge_email; ?>" value="<?php echo $_POST[email]; ?>"
             <?php if ($fehler["email"] != "") { echo 'class="errordesignfields"'; } ?>/></td>
     		</tr>
 
@@ -437,9 +437,9 @@ exit;
 
         <tr>
           <td class="label"><label>Firma: </label></td>
-          <td class="field">             
-            <input type="text" name="firma" 
-            maxlength="<?php echo $zeichenlaenge_firma; ?>" value="<?php echo $_POST[firma]; ?>"  /></td>             
+          <td class="field">
+            <input type="text" name="firma"
+            maxlength="<?php echo $zeichenlaenge_firma; ?>" value="<?php echo $_POST[firma]; ?>"  /></td>
         </tr>
       </table>
     </fieldset>
@@ -456,14 +456,14 @@ exit;
               <option selected="selected" value="0"></option>
               <option value="Newsletter"<?php if($_POST['betreff']=="Newsletter"){ echo "selected";}?>>Newsletter</option>
               <option value="Infomaterial"<?php if($_POST['betreff']=="Infomaterial"){ echo "selected";}?>>Infomaterial</option>
-              <option value="Angebotsanfrage"<?php if($_POST['betreff']=="Angebotsanfrage"){ echo "selected";}?>>Angebotsanfrage</option>
-              
+              <option value="Angebotsanfrage"<?php if($_POST['betreff']=="Angebotsanfrage" || $_GET['betreff']=="Angebotsanfrage"){ echo "selected";}?>>Angebotsanfrage</option>
+
               <?php if ($fehler["betreff"] != "") { echo 'class="errordesignfields"'; } ?>/>
             </select>
           </td>
         </tr>
 
-      	<tr>	
+      	<tr>
        		<td class="label"><label>Nachricht: <span class="pflichtfeld">*</span></label></td>
        		<td class="field"><?php if ($fehler["nachricht"] != "") { echo $fehler["nachricht"]; } ?><textarea name="nachricht" style="width:200px;border-right: 1px solid #ddd;border-bottom: 1px solid #ddd;border-left: 1px solid #666666;border-top: 1px solid #666666;padding: 0px 3px;margin: 3px 0;"  cols="30" rows="8" <?php if ($fehler["nachricht"] != "") { echo 'class="errordesignfields"'; } ?>><?php echo $_POST[nachricht]; ?></textarea></td>
       	</tr>

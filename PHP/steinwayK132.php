@@ -13,7 +13,7 @@
     </div>
     <div class="productPictureDivSteinway">
       <img src="../Resources/Pianos/steinwayK132.png" width="300" height="300" alt="Konnte nicht geladen werden">
-      <a class="orderButtonSteinway" href="index.php?page=kontakt&type=productoffer"><span class="orderButtonSpanSteinway">Bestellanfrage</span></a>
+      <a class="orderButtonSteinway" href="index.php?page=kontakt&betreff=Angebotsanfrage"><span class="orderButtonSpanSteinway">Bestellanfrage</span></a>
       <table class="dataTableSteinway">
         <tr>
           <td colspan="2" style="text-align: center; font-size: 20px"><u><strong>Klavierdaten</strong></u></td>

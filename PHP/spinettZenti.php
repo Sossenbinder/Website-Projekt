@@ -22,7 +22,7 @@
     </div>
     <div class="productPictureDivZenti">
       <img src="../Resources/Pianos/Spinett.png" alt="Konnte nicht geladen werden">
-      <a class="orderButtonZenti" href="index.php?page=kontakt&type=productoffer"><span class="orderButtonSpanZenti">Bestellanfrage</span></a>
+      <a class="orderButtonZenti" href="index.php?page=kontakt&betreff=Angebotsanfrage"><span class="orderButtonSpanZenti">Bestellanfrage</span></a>
       <table class="dataTableZenti">
         <tr>
           <td colspan="2" style="text-align: center; font-size: 20px"><u><strong>Klavierdaten</strong></u></td>
