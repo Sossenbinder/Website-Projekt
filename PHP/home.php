@@ -17,6 +17,7 @@
 	<div class="social">  	
 		<div class="socialHead">
 		<h1>Neuigkeiten von unseren Social-Sites:</h1>
+		<hr>
 		</div>
 	  	<div class="twitterTimeline">
 		    <a class="twitter-timeline" href="https://twitter.com/PianoLorentz" data-widget-id="610113760607535104">Tweets von @PianoLorentz </a>

@@ -4,6 +4,7 @@
 
 html,body
 {
+  min-width: 800px;
     width: 100%;
     margin: 0px;
     padding: 0px;
@@ -98,7 +99,6 @@ html,body
 
 .siteContent{
   position: absolute;
-
   left: 5%;
   top: 0%;
   right: 5%;
@@ -144,7 +144,7 @@ html,body
   background: #CCCCCC;
   position: relative;
 
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #CCC;
   border-top: 1px solid black;
 }
 
@@ -156,8 +156,8 @@ html,body
   white-space: nowrap;
 	overflow: hidden;
 
-  border-right: 1px solid black;
-  border-left: 1px solid black;
+  /*border-right: 1px solid black;
+  border-left: 1px solid black;*/
   font-size: 20px;
   text-decoration: none;test
   color: #141414;

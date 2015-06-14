@@ -33,6 +33,13 @@
   	color: #404040;
 }
 
+.social hr {
+	width:98%;
+	color: #222;
+	border-color: solid #222;
+	background-color: solid #222;
+}
+
 .twitterTimeline, .googlePosts, .facebookFeed {
 	width:30%;
 	margin:10px 1% 0 1%;
