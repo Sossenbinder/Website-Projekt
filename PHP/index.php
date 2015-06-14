@@ -42,6 +42,9 @@
               case 'spinettZenti':
                     include('spinettZenti.php');
                     break;
+              case 'clavinova':
+                    include('clavinova.php');
+                    break;
               default:
                     include('home.php');
             }

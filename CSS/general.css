@@ -191,17 +191,16 @@ html,body
 }
 
 .menuElementTwo{
-  left: calc(20% + 1px);
+  left: 20%;
 }
 .menuElementThree{
-  left: calc(40% + 2px);
+  left: 40%;
 }
 .menuElementFour{
-  left: calc(60% + 3px);
+  left: 60%;
 }
 .menuElementFive{
-  border-right: none;
-  left: calc(80% + 4px);
+  left: 80%;
 }
 
 /*Generelles Ende*/
