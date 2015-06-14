@@ -1,0 +1,46 @@
+.welcome {
+	width:100%;
+	height:50%;
+	text-align: center;
+	margin:10px;
+	margin-bottom: 30px;
+}
+
+.welcome h1 {
+	font-family: Candara, Calibri, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+	font-size: 54px;
+	font-style: italic;
+	font-variant: normal;
+	font-weight: bold;
+	line-height: 45.5999984741211px;
+  	color: #B2B2B2;
+ 	text-shadow: 2px 1px 1px #000;
+}
+
+.welcome img {
+	width:60%;
+	box-shadow: 5px 4px 8px #555;
+}
+
+.social {
+	width:100%;
+	margin: 5px;
+}
+
+.social h1{
+	font-family: Candara, Calibri, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+
+  	color: #404040;
+}
+
+.twitterTimeline, .googlePosts, .facebookFeed {
+	width:30%;
+	margin:10px 1% 0 1%;
+	float:left;
+	text-align: center;
+	overflow: auto;
+}
+
+.googlePost {
+	float:left;
+}
