@@ -45,6 +45,9 @@
               case 'clavinova':
                     include('clavinova.php');
                     break;
+              case 'essex':
+                    include('Essex_EGP-173.php');
+                    break;
               default:
                     include('home.php');
             }

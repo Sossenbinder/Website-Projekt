@@ -64,12 +64,12 @@
 
   <div class="product">
     <div class="productTextDiv">
-      <h1><u>Produkt 5:</u></h1>
+      <h1><u>Essex_EGP-173:</u></h1>
       <p> Produkt 5
       </p>
     </div>
-    <a class="productInformation"><span><i>Mehr Informationen zu diesem Produkt</i></span></a>
-    <img src="../Resources/Pianos/steinwayK132.png" alt="Konnte nicht geladen werden">
+    <a href="index.php?page=essex" class="productInformation"><span><i>Mehr Informationen zu diesem Produkt</i></span></a>
+    <img src="../Resources/Pianos/Essex_EGP-173.png" alt="Konnte nicht geladen werden">
   </div>
 
 </div>
