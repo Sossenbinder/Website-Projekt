@@ -5,7 +5,7 @@
   <div class="logoImage">
     <a href="?page=home"><img src="../Resources/Pictures/logo.png"></a>
   </div>
-  <a href="http://www.facebook.com" id="facebookTag" class="facebookTag"></a>
+  <a href="http://www.facebook.com/PianoLorentz" id="facebookTag" class="facebookTag"></a>
   <a href="https://plus.google.com/u/0/112766873149357913973/posts" id="googleplusTag" class="googleplusTag"></a>
   <a href="https://twitter.com/PianoLorentz" id="twitterTag" class="twitterTag"></a>
 </div>
