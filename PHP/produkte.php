@@ -16,7 +16,7 @@
     <img src="../Resources/Pianos/steinwayK132.png" alt="Konnte nicht geladen werden">
   </div>
 
-
+  <hr>
   <div class="product">
     <div class="productTextDiv">
       <h1><u>Konzertfl&uumlgel D-274:</u></h1>
@@ -28,7 +28,7 @@
     <a href="index.php?page=fluegelP3201" class="productInformation"><span><i>Mehr Informationen zu diesem Produkt</i></span></a>
     <img src="../Resources/Pianos/Fluegel.png" alt="Konnte nicht geladen werden">
   </div>
-
+  <hr>
   <div class="product">
     <div class="productTextDiv">
       <h1><u>Spinett "Zenti":</u></h1>
@@ -48,7 +48,7 @@
     <a href="index.php?page=spinettZenti" class="productInformation"><span><i>Mehr Informationen zu diesem Produkt</i></span></a>
     <img src="../Resources/Pianos/Spinett.png" alt="Konnte nicht geladen werden">
   </div>
-
+  <hr>
   <div class="product">
     <div class="productTextDiv">
       <h1><u>Yamaha Clavinova CLP-470PE:</u></h1>
@@ -61,12 +61,15 @@
     <a href="index.php?page=clavinova" class="productInformation"><span><i>Mehr Informationen zu diesem Produkt</i></span></a>
     <img src="../Resources/Pianos/Clavinova.png" alt="Konnte nicht geladen werden">
   </div>
-
+  <hr>
   <div class="product">
     <div class="productTextDiv">
       <h1><u>Essex_EGP-173:</u></h1>
-      <p> Produkt 5
-      </p>
+      <p>Das Essex EGP-173 ist ideal f&uuml;r den Liebhaber des klassischen Pianodesigns, das die Basis f&uuml;r alle weiteren Stilrichtungen bildet. Dieser klassische Sheraton-Stil wurde von Steinway &amp; Sons im Jahre 1900 zum ersten Mal vorgestellt und hat sich seit dem bew&auml;hrt.</p>
+
+      <p>Dieses Modell kommt zwar auch aus dem Hause Steinway &amp; Sons, ist aber im Gegensatz zum Konzertfl&uuml;gel P3201 deutlich kleiner. Dies liegt vor allem daran, dass die Essex-Reihe von Steinway nicht zur h&ouml;chsten Klasse der von Steinway &amp; Sons gefertigten Pianos geh&ouml;rt - was allerdings nicht als schlechtere Qualit&auml;t zu verstehen ist.</p>
+
+      <p>Essex sind eher solche Klaviermodelle, die vom Preis und von der Gr&ouml;&szlig;e weniger an professionelle Spieler und stattdessen mehr an Spieler gerichtet sind, die keine professionellen Konzerte, sondern lieber privat zu Hause spielen - an leidenschaftliche Klavierliebhaber also.</p>
     </div>
     <a href="index.php?page=essex" class="productInformation"><span><i>Mehr Informationen zu diesem Produkt</i></span></a>
     <img src="../Resources/Pianos/Essex_EGP-173.png" alt="Konnte nicht geladen werden">

@@ -8,7 +8,7 @@
 
   position: absolute;
   right: 5%;
-  top: 25px;
+  top: 10%;
   height: 300px;
 
   border: 1px ridge black;
@@ -18,7 +18,7 @@
 
   position: absolute;
   right: 5%;
-  top: 25px;
+  top: 10%;
   height: 194px;
 
   border: 1px ridge black;
@@ -147,5 +147,5 @@ tr{
   position:relative;
   left: 50%;
 
-  font-size: 37px;
+  font-size: 40px;
 }

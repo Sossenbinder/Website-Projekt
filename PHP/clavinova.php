@@ -2,7 +2,10 @@
   <div class="productDiv">
     <div class="textDiv" id="textDiv">
 
-      <h1 class="productHeading"><u>Yamaha Clavinova<br> CLP-470PE:</u></h1>
+      <h1 class="productHeading" style="left:40%;"><u>Yamaha Clavinova CLP-470PE:</u></h1>
+
+      <hr>
+
       <p>&quot;Real Grand Expression. Dieser Begriff verk&ouml;rpert alles, was mit den Ausdrucksm&ouml;glichkeiten des Clavinova gemeint ist. Nicht nur die umfassende Verwirklichung des Tons, des Anschlags und der Pedale, sondern auch der Einsatz von Technologien aus dem Klavierbau verbinden diese drei Elemente zu einem einzigartigen Piano. Ein Piano, das durch den Anschlag der Klaviatur und das Spielgef&uuml;hl der Pedale genau so klingt, wie Sie es m&ouml;chten. Sie werden sich beim Spielen tats&auml;chlich so f&uuml;hlen, als ob Sie an einem Fl&uuml;gel sitzen.&quot; - so beschreibt der Hersteller Yamaha dieses Clavinova-Modell.</p>
 
       <p>Tats&auml;chlich sind Digitalpianos inzwischen in der Welt der Klavierspieler angekommen. Waren sie fr&uuml;her noch verschrien und gemeidet aufgrund des k&uuml;nstlichen Klangs, steigt ihre Beliebtheit heutzutrage unaufhaltsam. Immerhin bieten die Digitalpianos eine Menge an Vorteilen. Kompaktheit, geringerer Preis, Portabilit&auml;t - um nur einige davon zu nennen.</p>
@@ -24,6 +27,8 @@
         <li>Reproduziert präzise die Gewichtung und das Verhalten jeder einzelnen Taste (88-Key Linear Graded Hammers)</li>
         <li>Pedale mit dem gleichen Spielgefühl wie beim Flügel (GP Response Damper Pedal)</li>
         <li>Die neue Generation der Piano-Tonerzeugung bietet eine hervorragende Möglichkeiten des Ausdrucks (RGE Sound Engine)</li>
+      </ul>
+      <hr>
     </div>
     <div class="productPictureDivSteinway">
       <img src="../Resources/Pianos/clavinova.png" width="300" height="300" alt="Konnte nicht geladen werden">
