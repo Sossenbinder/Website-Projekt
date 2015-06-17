@@ -108,6 +108,10 @@ html,body
   background: #A59991;
 }
 
+.siteContent p{
+  font-size:18px;
+}
+
 .companyFontDiv{
 
   position: absolute;
