@@ -4,6 +4,7 @@
     <link rel="stylesheet" type="text/css" href="../CSS/general.css">
     <link rel="stylesheet" type="text/css" href="../CSS/produkte.css">
     <link rel="stylesheet" type="text/css" href="../CSS/produktInformation.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/kundenmeinungen.css">
   </head>
 
   <body>

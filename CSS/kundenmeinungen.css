@@ -1,0 +1,5 @@
+.customerTextDiv{
+  position: relative;
+  top: 2%;
+  left: calc(2.5% - 3px);
+}
