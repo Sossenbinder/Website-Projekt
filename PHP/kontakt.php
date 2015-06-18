@@ -75,7 +75,10 @@ if(!$telefon){
     $mail3="mail.com";
 
     $headers = "From: "." <".$email.">";
-    
+
+    $nachricht .= "\n\n\nBitte melden sie sich bei mir: \n".$adresse." ".$ortplz."\nOder auch telefonisch: ".$telefon;
+    $nachricht .= "\n\nMit freundlichen Grueßen,\n".$anrede." ".$vorname." ".$name;
+
 
     if(mail($mail1.$mail2.$mail3, $betreff, $nachricht, $headers)){
       echo "<META HTTP-EQUIV=\"refresh\" content=\"0;URL=".$danke."\">";
