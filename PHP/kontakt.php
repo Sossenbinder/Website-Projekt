@@ -69,9 +69,18 @@ if(!$telefon){
 }
 
   if ($anrede && $vorname && $name && $adresse && $ortplz && $telefon && $email && $betreff && $nachricht){
-    //mail($email, $betreff, $nachricht);
-    mail("Stefan.Schranz@t-online.de", "Testmail", "Hallo test", "From: Nils Reimers <absender@domain.de>");
-    //echo "<META HTTP-EQUIV=\"refresh\" content=\"0;URL=".$danke."\">";
+
+    $mail1="piano.lo";
+    $mail2="rentz@g";
+    $mail3="mail.com";
+
+    $headers = "From: "." <".$email.">";
+    
+
+    if(mail($mail1.$mail2.$mail3, $betreff, $nachricht, $headers)){
+      echo "<META HTTP-EQUIV=\"refresh\" content=\"0;URL=".$danke."\">";
+    };
+
     exit;
   }
 }
@@ -208,7 +217,7 @@ if(!$telefon){
       <legend>Ihre Aktion</legend>
       <br />
       <div>Hinweis: Felder mit <span class="pflichtfeld"><strong>*</strong></span> m&uuml;ssen ausgef&uuml;llt werden.<br /><br />
-        <input type="submit" name="kf-km" value="Senden" onclick="tescht();"/>
+        <input type="submit" name="kf-km" value="Senden" />
         <input type="submit" name="delete" value="L&ouml;schen" />
       </div>
     </fieldset>
