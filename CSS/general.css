@@ -42,41 +42,28 @@ html,body
 
 /*Generelles, das auf jeder Seite zu sehen sein sollte */
 
-.facebookTag{
-  height: 40px;
-  width: 40px;
-
-  background-image: url("../Resources/Pictures/fb.png");
+.facebookTag, .googleplusTag, .twitterTag{
+  height: 4.3vh;
+  width: 4.3vh;
   background-repeat: no-repeat;
-  background-size: 40px 40px;
+  background-size: 100%;
   position: absolute;
+  right: 0.928%;
+}
+
+.facebookTag {
+  background-image: url("../Resources/Pictures/fb.png");
   top: 15%;
-  right: 0.428%;
 }
 
 .googleplusTag{
-  height: 40px;
-  width: 40px;
-
   background-image: url("../Resources/Pictures/g+.png");
-  background-repeat: no-repeat;
-  background-size: 40px 40px;
-
-  position: absolute;
   top: 42.5%;
-  right: 0.4%;
 }
 
 .twitterTag{
-  height: 40px;
-  width: 40px;
-
   background-image: url("../Resources/Pictures/twitter.png");
-  background-repeat: no-repeat;
-  background-size: 40px 40px;
-  position: absolute;
   top: 70%;
-  right: 0.4%;
 }
 
 .topMenu{
@@ -133,6 +120,7 @@ html,body
 
 .logoImage {
 	height: 100%;
+  width: 15vh;
 }
 
 .logoImage img {
