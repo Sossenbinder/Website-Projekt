@@ -93,7 +93,7 @@ if(!$telefon){
 
 
 
-<div class="kontaktformular">
+<div class="kontaktformular" id="ktf">
   <link rel="stylesheet" type="text/css" href="../CSS/general.css">
   <link rel="stylesheet" type="text/css" href="../CSS/kontakte.css">
 
