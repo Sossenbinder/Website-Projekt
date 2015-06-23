@@ -15,6 +15,7 @@
       <p>In der Tat ist dieses Modell sogar so ber&uuml;hmt und bekannt, dass es sich schon in vielen Geschichtsb&uuml;chern finden l&auml;sst. Bei vielen Staatsempf&auml;ngen, Preis&uuml;bergaben, und auch in vielen Musikvideos oder Biografien von bekannten Pianisten ist dieses Instrument zu finden.</p>
 
       <p>Wenn auch sie auf einem St&uuml;ck Geschichte ihre n&auml;chsten Noten spielen wollten, entscheiden sie sich f&uuml;r diesen Fl&uuml;gel.</p>
+      <br><br><br><br><br><br>
       <hr>
     </div>
     <div class="productPictureDivSteinway">

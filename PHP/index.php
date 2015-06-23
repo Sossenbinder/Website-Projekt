@@ -59,6 +59,7 @@
           <!-- footer -->
       </div>
     </div>
-    <script language="javascript" type="text/javascript" src="../JS/autoResize.js"></script>
+    <script type="text/javascript" src="../JS/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="../JS/autocomplete.js"></script>
   </body>
 </html>
