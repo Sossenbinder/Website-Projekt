@@ -29,54 +29,54 @@
     $email          = stripslashes($email);
     $betreff        = stripslashes($betreff);
     $nachricht      = stripslashes($nachricht);
-  
+
 
     if (isset($anrede) && $anrede == "0") {
-      $fehler['anrede']   = "<font color=#cc3333>Bitte w&auml;hlen Sie eine 
+      $fehler['anrede']   = "<font color=#cc3333>Bitte w&auml;hlen Sie eine
                       <strong>Anrede</strong> aus.<br /></font>";
     }
 
     if(!$vorname) {
-      $fehler['vorname']  = "<font color=#cc3333>Geben Sie bitte Ihren 
+      $fehler['vorname']  = "<font color=#cc3333>Geben Sie bitte Ihren
                       <strong>Vornamen</strong> ein.<br /></font>";
     }
 
     if(!$name) {
-      $fehler['name']     = "<font color=#cc3333>Geben Sie bitte Ihren 
+      $fehler['name']     = "<font color=#cc3333>Geben Sie bitte Ihren
                       <strong>Nachnamen</strong> ein.<br /></font>";
     }
 
     if(!$adresse) {
-      $fehler['adresse']  = "<font color=#cc3333>Geben Sie bitte Ihre 
+      $fehler['adresse']  = "<font color=#cc3333>Geben Sie bitte Ihre
                       <strong>Adresse</strong> ein.<br /></font>";
     }
 
     if(!$ortplz) {
-      $fehler['ortplz']   = "<font color=#cc3333>Geben Sie bitte den 
+      $fehler['ortplz']   = "<font color=#cc3333>Geben Sie bitte den
                       <strong>PLZ</strong> und den <strong>Ort</strong> ein.<br /></font>";
     }
 
     if (!preg_match("/^[0-9a-zA-ZÄÜÖ_.-]+@[0-9a-z.-]+\.[a-z]{2,6}$/", $email)) {
-      $fehler['email']    = "<font color=#cc3333>Geben Sie bitte Ihre 
+      $fehler['email']    = "<font color=#cc3333>Geben Sie bitte Ihre
                       <strong>E-Mail-Adresse</strong> ein.\n<br /></font>";
     }
 
     if(!$betreff) {
-     $fehler['betreff']    = "<font color=#cc3333>Bitte waehlen Sie einen 
+     $fehler['betreff']    = "<font color=#cc3333>Bitte waehlen Sie einen
                       <strong>Betreff</strong>.<br /></font>";
     }
 
     if(!$nachricht) {
-     $fehler['nachricht']  = "<font color=#cc3333>Geben Sie bitte eine 
+     $fehler['nachricht']  = "<font color=#cc3333>Geben Sie bitte eine
                       <strong>Nachricht</strong> ein.<br /></font>";
     }
 
     if(!$telefon){
-      $fehler['telefon']   = "<font color=#cc3333>Geben Sie bitte eine 
+      $fehler['telefon']   = "<font color=#cc3333>Geben Sie bitte eine
       <strong>Telefonnummer</strong> ein.<br /></font>";
     }
 
-    if ($anrede && $vorname && $name && $adresse && $ortplz && $telefon && $email && $betreff && $nachricht){
+    if ($anrede && $vorname && $name && $adresse && $ortplz && $telefon && $email && $betreff && $nachricht && $betreff!='Newsletter'){
       $mail1="piano.lo";
       $mail2="rentz@g";
       $mail3="mail.com";
@@ -86,10 +86,13 @@
       $nachricht .= "\n\n\nBitte melden sie sich bei mir: \n".$adresse." ".$ortplz."\nOder auch telefonisch: ".$telefon;
       $nachricht .= "\n\nMit freundlichen Grueßen,\n".$anrede." ".$vorname." ".$name;
 
-      if(mail($mail1.$mail2.$mail3, $betreff, $nachricht, $headers)){
+      if(mail($mail1.$mail2.$mail3, wordwrap( $betreff, 100, "\n" ), $nachricht, $headers)){
         echo "<META HTTP-EQUIV=\"refresh\" content=\"0;URL=".$danke."\">";
       };
       exit;
+    }
+    elseif($anrede && $vorname && $name && $adresse && $ortplz && $telefon && $email && $betreff && $nachricht && $betreff=='Newsletter'){
+      include('newsletter.php');
     }
   }
 ?>
@@ -99,7 +102,7 @@
   <link rel="stylesheet" type="text/css" href="../CSS/kontakte.css">
 
   <form action="<?php $_SERVER['PHP_SELF'];?>" method="post" enctype="multipart/form-data">
-    
+
     <fieldset class="kontaktdaten">
       <legend>Kontaktdaten</legend>
       <table>
@@ -180,7 +183,7 @@
         </tr>
       </table>
     </fieldset>
-    
+
     <fieldset class="anfrage">
       <legend>Anfrage</legend>
       <table>
@@ -205,7 +208,7 @@
       	</tr>
       </table>
     </fieldset>
-  
+
     <?php
       for ($i=0; $i < $cfg['NUM_ATTACHMENT_FIELDS']; $i++) {
         echo '<fieldset class="upload">';
