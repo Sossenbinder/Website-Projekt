@@ -1,13 +1,24 @@
-var fullString = "";
+var plz = "";
 
 $(document).ready(function(){
 
     $('#ktf').keyup(function(evt){
 
-      var keypressed = String.fromCharCode(evt.which);
-      fullString+=keypressed;
-      console.log(keypressed);
-      console.log(fullString);
+      if("plz" === evt.target.name){
+        plz += String.fromCharCode(evt.which);
+      }
+
+      if(plz.length>3){
+        $.ajax({
+          url: "autocomplete.php",
+          type: 'GET',
+          data: {keyword: plz},
+          success: function(returndata){
+
+            //Foreach element, new optn...
+          }
+        });
+      }
 
     })
 
