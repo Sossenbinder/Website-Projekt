@@ -14,7 +14,8 @@
     $vorname        = $_POST["vorname"];
     $name           = $_POST["name"];
     $adresse        = $_POST["adresse"];
-    $ortplz         = $_POST["ortplz"];
+    $plz            = $_POST["plz"];
+    $ort            = $_POST["ort"];
     $telefon        = $_POST["telefon"];
     $email          = $_POST["email"];
     $betreff        = $_POST["betreff"];
@@ -51,9 +52,14 @@
                       <strong>Adresse</strong> ein.<br /></font>";
     }
 
-    if(!$ortplz) {
-      $fehler['ortplz']   = "<font color=#cc3333>Geben Sie bitte den
-                      <strong>PLZ</strong> und den <strong>Ort</strong> ein.<br /></font>";
+    if(!$plz) {
+      $fehler['plz']   = "<font color=#cc3333>Geben Sie bitte die
+                      <strong>PLZ</strong> ein.<br /></font>";
+    }
+
+    if(!$ort) {
+      $fehler['ort']   = "<font color=#cc3333>Geben Sie bitte den
+                      <strong>Ort</strong> ein.<br /></font>";
     }
 
     if (!preg_match("/^[0-9a-zA-ZÄÜÖ_.-]+@[0-9a-z.-]+\.[a-z]{2,6}$/", $email)) {
@@ -76,14 +82,14 @@
       <strong>Telefonnummer</strong> ein.<br /></font>";
     }
 
-    if ($anrede && $vorname && $name && $adresse && $ortplz && $telefon && $email && $betreff && $nachricht && $betreff!='Newsletter'){
+    if ($anrede && $vorname && $name && $adresse && $ort && $plz && $telefon && $email && $betreff && $nachricht && $betreff!='Newsletter'){
       $mail1="piano.lo";
       $mail2="rentz@g";
       $mail3="mail.com";
 
       $headers = "From: "." <".$email.">";
 
-      $nachricht .= "\n\n\nBitte melden sie sich bei mir: \n".$adresse." ".$ortplz."\nOder auch telefonisch: ".$telefon;
+      $nachricht .= "\n\n\nBitte melden sie sich bei mir: \n".$adresse." ".$plz." ".$ort."\nOder auch telefonisch: ".$telefon;
       $nachricht .= "\n\nMit freundlichen Grueßen,\n".$anrede." ".$vorname." ".$name;
 
       if(mail($mail1.$mail2.$mail3, wordwrap( $betreff, 100, "\n" ), $nachricht, $headers)){
@@ -91,7 +97,7 @@
       };
       exit;
     }
-    elseif($anrede && $vorname && $name && $adresse && $ortplz && $telefon && $email && $betreff && $nachricht && $betreff=='Newsletter'){
+    elseif($anrede && $vorname && $name && $adresse && $plz && $telefon && $email && $betreff && $nachricht && $betreff=='Newsletter'){
       include('newsletter.php');
     }
   }
@@ -144,11 +150,20 @@
         </tr>
 
         <tr>
-          <td class="label"><label>PLZ / Ort: <span class="pflichtfeld">*</span></label></td>
+          <td class="label"><label>PLZ: <span class="pflichtfeld">*</span></label></td>
           <td class="field">
-            <?php if ($fehler["ortplz"] != "") { echo $fehler["ortplz"]; } ?>
-            <input type="text" name="ortplz" maxlength="<?php echo $zeichenlaenge_ortplz; ?>" value="<?php echo $_POST[ortplz]; ?>"
-            <?php if ($fehler["ortplz"] != "") { echo 'class="errordesignfields"'; } ?>/></td>
+            <?php if ($fehler["plz"] != "") { echo $fehler["plz"]; } ?>
+            <input type="text" name="plz" maxlength="<?php echo $zeichenlaenge_plz; ?>" value="<?php echo $_POST[plz]; ?>"
+            <?php if ($fehler["plz"] != "") { echo 'class="errordesignfields"'; } ?>/></td>
+        </tr>
+
+        <tr>
+          <td class="label"><label>Ort: <span class="pflichtfeld">*</span></label></td>
+          <td class="field">
+            <?php if ($fehler["ort"] != "") { echo $fehler["ort"]; } ?>
+            <select id="cityDropDown">
+              <option value="Berlin">Berlin</option>
+            </select>
         </tr>
 
         <tr>
