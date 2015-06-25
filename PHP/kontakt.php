@@ -161,8 +161,9 @@
           <td class="label"><label>Ort: <span class="pflichtfeld">*</span></label></td>
           <td class="field">
             <?php if ($fehler["ort"] != "") { echo $fehler["ort"]; } ?>
-            <select name="ort" id="cityDropDown">
-            </select>
+            <input type='text' list='cityDropDown'>
+            <datalist id="cityDropDown">
+            </datalist>
         </tr>
 
         <tr>

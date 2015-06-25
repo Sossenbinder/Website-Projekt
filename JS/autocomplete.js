@@ -6,7 +6,7 @@ $(document).ready(function(){
     if(plzfield.value.length>=2){
       getData();
     }
-    
+
     $('#ktf').keyup(function(evt){
 
       if(evt.target.name==="plz"){
@@ -21,9 +21,9 @@ $(document).ready(function(){
 
 function addToOption(element){
   var optn = document.createElement('option');
-  optn.text = element;
+  optn.label = element;
   optn.value = element;
-  citydropdown.add(optn);
+  citydropdown.appendChild(optn);
 }
 
 function getData(){
