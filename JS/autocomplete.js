@@ -7,15 +7,15 @@ $(document).ready(function(){
       if("plz" === evt.target.name){
         plz += String.fromCharCode(evt.which);
       }
-
+      console.log(plz);
       if(plz.length>3){
         $.ajax({
           url: "autocomplete.php",
-          type: 'GET',
-          data: {keyword: plz},
+          data: {data: plz},
+          type: "POST",
           success: function(returndata){
 
-            //Foreach element, new optn...
+            console.log(returndata);
           }
         });
       }
