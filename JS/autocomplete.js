@@ -9,30 +9,7 @@ $(document).ready(function(){
         citydropdown.innerHTML = "";
 
         if(plzfield.value.length>=2){
-          $.ajax({
-            url: "autocomplete.php",
-            data: {data: plzfield.value},
-            type: "POST",
-            success: function(returndata){
-
-              console.log(returndata);
-
-              if(returndata!=""){
-                var arr = JSON.parse(returndata);
-                for(i=0; i < arr.length; i++){
-
-                  if(arr[i].ascii.indexOf("-") > -1){
-
-                    addToOption(arr[i].ascii[0]+arr[i].ascii.substring(1,arr[i].ascii.indexOf("-")).toLowerCase()+"-"
-                    +arr[i].ascii[arr[i].ascii.indexOf("-")+1]+arr[i].ascii.substring(arr[i].ascii.indexOf("-")+2,arr[i].ascii.length).toLowerCase());
-                  }
-                  else{
-                    addToOption(arr[i].ascii[0]+arr[i].ascii.substring(1,arr[i].ascii.length).toLowerCase());
-                  }
-                }
-              }
-            }
-          });
+          getData();
         }
       }
     })
@@ -43,4 +20,31 @@ function addToOption(element){
   optn.text = element;
   optn.value = element;
   citydropdown.add(optn);
+}
+
+function getData(){
+  $.ajax({
+    url: "autocomplete.php",
+    data: {data: plzfield.value},
+    type: "POST",
+    success: function(returndata){
+
+      console.log(returndata);
+
+      if(returndata!=""){
+        var arr = JSON.parse(returndata);
+        for(i=0; i < arr.length; i++){
+
+          if(arr[i].ascii.indexOf("-") > -1){
+
+            addToOption(arr[i].ascii[0]+arr[i].ascii.substring(1,arr[i].ascii.indexOf("-")).toLowerCase()+"-"
+            +arr[i].ascii[arr[i].ascii.indexOf("-")+1]+arr[i].ascii.substring(arr[i].ascii.indexOf("-")+2,arr[i].ascii.length).toLowerCase());
+          }
+          else{
+            addToOption(arr[i].ascii[0]+arr[i].ascii.substring(1,arr[i].ascii.length).toLowerCase());
+          }
+        }
+      }
+    }
+  });
 }

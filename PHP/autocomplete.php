@@ -18,7 +18,6 @@
       echo ("Datenbank nicht verfügbar");
     }
 
-    //$sql = "SELECT Ortsname FROM postcodes WHERE PLZ LIKE '%" . $_POST['data'] ."%'";
     $sql = "SELECT `ascii` FROM `geoinfo` WHERE plz LIKE '%" . $key ."%'";
 
     $result = $conn->query($sql);
