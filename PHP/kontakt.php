@@ -162,7 +162,6 @@
           <td class="field">
             <?php if ($fehler["ort"] != "") { echo $fehler["ort"]; } ?>
             <select id="cityDropDown">
-              <option value="Berlin">Berlin</option>
             </select>
         </tr>
 

@@ -1,4 +1,5 @@
 var plz = "";
+var citydropdown = document.getElementById('cityDropDown');
 
 $(document).ready(function(){
 
@@ -7,8 +8,10 @@ $(document).ready(function(){
       if("plz" === evt.target.name){
         plz += String.fromCharCode(evt.which);
       }
-      console.log(plz);
-      if(plz.length>3){
+
+      citydropdown.innerHTML = "";
+
+      if(plz.length>=3){
         $.ajax({
           url: "autocomplete.php",
           data: {data: plz},
@@ -16,14 +19,19 @@ $(document).ready(function(){
           success: function(returndata){
 
             console.log(returndata);
+            var arr = JSON.parse(returndata);
+            for(i=0; i < arr.length; i++){
+              addToOption(arr[i].Ortsname);
+            }
           }
         });
       }
 
     })
-
-    var optn = document.createElement('option');
-    optn.text="Berlin";
-    document.getElementById('cityDropDown').add(optn);
-
 });
+
+function addToOption(element){
+  var optn = document.createElement('option');
+  optn.text=element;
+  citydropdown.add(optn);
+}

@@ -1,9 +1,12 @@
 <?php
 
-  $servername = '';
-  $username = '';
-  $password = '';
-  $dbname = '';
+  $servername = 'localhost';
+  $username = 'root';
+  $password = 'lorentz1234';
+  $dbname = 'vorlesung';
+  $result = '';
+
+  $rows = array();
 
   $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -11,6 +14,16 @@
     echo ("Datenbank nicht verfügbar");
   }
 
-  $plz = $_POST['data'];
-  echo($plz);
+  $sql = "SELECT Ortsname FROM postcodes WHERE PLZ LIKE '%" . $_POST['data'] ."%'";
+
+  $result = $conn->query($sql);
+
+  if ($result){
+
+    while($r = mysqli_fetch_assoc($result)) {
+      $rows[] = $r;
+    }
+  }
+
+  echo(json_encode($rows));
 ?>
