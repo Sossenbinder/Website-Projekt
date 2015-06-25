@@ -3,6 +3,10 @@ var plzfield = document.getElementById('plzField');
 
 $(document).ready(function(){
 
+    if(plzfield.value.length>=2){
+      getData();
+    }
+    
     $('#ktf').keyup(function(evt){
 
       if(evt.target.name==="plz"){
