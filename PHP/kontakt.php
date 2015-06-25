@@ -153,7 +153,7 @@
           <td class="label"><label>PLZ: <span class="pflichtfeld">*</span></label></td>
           <td class="field">
             <?php if ($fehler["plz"] != "") { echo $fehler["plz"]; } ?>
-            <input type="text" name="plz" maxlength="<?php echo $zeichenlaenge_plz; ?>" value="<?php echo $_POST[plz]; ?>"
+            <input type="text" id="plzField" name="plz" maxlength="<?php echo $zeichenlaenge_plz; ?>" value="<?php echo $_POST[plz]; ?>"
             <?php if ($fehler["plz"] != "") { echo 'class="errordesignfields"'; } ?>/></td>
         </tr>
 
@@ -161,7 +161,7 @@
           <td class="label"><label>Ort: <span class="pflichtfeld">*</span></label></td>
           <td class="field">
             <?php if ($fehler["ort"] != "") { echo $fehler["ort"]; } ?>
-            <select id="cityDropDown">
+            <select name="ort" id="cityDropDown">
             </select>
         </tr>
 
