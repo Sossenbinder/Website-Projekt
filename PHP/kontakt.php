@@ -47,17 +47,17 @@
                       <strong>Nachnamen</strong> ein.<br /></font>";
     }
 
-    if(!$adresse) {
+    if(!$adresse && $betreff!='Newsletter') {
       $fehler['adresse']  = "<font color=#cc3333>Geben Sie bitte Ihre
                       <strong>Adresse</strong> ein.<br /></font>";
     }
 
-    if(!$plz) {
+    if(!$plz && $betreff!='Newsletter') {
       $fehler['plz']   = "<font color=#cc3333>Geben Sie bitte die
                       <strong>PLZ</strong> ein.<br /></font>";
     }
 
-    if(!$ort) {
+    if(!$ort && $betreff!='Newsletter') {
       $fehler['ort']   = "<font color=#cc3333>Geben Sie bitte den
                       <strong>Ort</strong> ein.<br /></font>";
     }
@@ -72,12 +72,12 @@
                       <strong>Betreff</strong>.<br /></font>";
     }
 
-    if(!$nachricht) {
+    if(!$nachricht && $betreff!='Newsletter') {
      $fehler['nachricht']  = "<font color=#cc3333>Geben Sie bitte eine
                       <strong>Nachricht</strong> ein.<br /></font>";
     }
 
-    if(!$telefon){
+    if(!$telefon && $betreff!='Newsletter'){
       $fehler['telefon']   = "<font color=#cc3333>Geben Sie bitte eine
       <strong>Telefonnummer</strong> ein.<br /></font>";
     }
@@ -97,7 +97,7 @@
       };
       exit;
     }
-    elseif($anrede && $vorname && $name && $adresse && $plz && $telefon && $email && $betreff && $nachricht && $betreff=='Newsletter'){
+    elseif($anrede && $vorname && $name && $email && $betreff=='Newsletter'){
       include('newsletter.php');
     }
   }
