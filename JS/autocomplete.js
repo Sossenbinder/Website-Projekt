@@ -58,7 +58,6 @@ function getPLZ(value){
     data: {data: value},
     type: "POST",
     success: function(returndata){
-      console.log(returndata);
       if(returndata.match(myRegExp)){
         plzfield.value = returndata;
       }
