@@ -22,6 +22,6 @@
   if ($conn->query($sql) === TRUE) {
       echo "<META HTTP-EQUIV=\"refresh\" content=\"0;URL=".$danke."\">";
   }
-
+  
   $conn->close();
 ?>

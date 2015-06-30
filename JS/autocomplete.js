@@ -33,8 +33,6 @@ function getData(){
     type: "POST",
     success: function(returndata){
 
-      console.log(returndata);
-
       if(returndata!=""){
         var arr = JSON.parse(returndata);
         for(i=0; i < arr.length; i++){

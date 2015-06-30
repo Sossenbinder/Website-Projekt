@@ -8,22 +8,22 @@
   box-shadow: 1px -1px 20px -1px rgba(0,0,0,0.75);
   background: gray;
   width: auto;
-  margin: 10px;  
+  margin: 10px;
   padding: 10px;
   float: left;
   clear: both;
   font-size: 13px;
 }
-   
+
 .kontaktformular a {
-  color: #D6D633; 
+  color: #D6D633;
   text-decoration: none;
 }
 
 .kontaktformular a:hover {
   color: #D6D633;
 }
-  
+
 .kontaktformular legend {
   background: #E6E6E6;
   padding: 3px 5px;
@@ -31,7 +31,7 @@
   box-shadow: 1px -1px 20px -1px rgba(0,0,0,0.75);
   text-transform: uppercase;
 }
-    
+
 .kontaktformular label {
   width: 90px;
   float: left;
@@ -39,11 +39,11 @@
   padding: 3px 10px;
   margin: 2px 0;
 }
-          
+
 .kontaktformular input, .kontaktformular textarea, .kontaktformular select {
-  border-right: 1px solid #ddd; 
+  border-right: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
-  border-left: 1px solid #666666; 
+  border-left: 1px solid #666666;
   border-top: 1px solid #666666;
   background: #E6E6E6;
   padding: 0px 3px;
@@ -51,63 +51,72 @@
   width: 120px;
 }
 
-.kontaktformular input:active, .kontaktformular input:focus, .kontaktformular input:hover { 
+.kontaktformular input:active, .kontaktformular input:focus, .kontaktformular input:hover {
   background: #D6D633;
 }
-.kontaktformular textarea:active, .kontaktformular textarea:focus, .kontaktformular textarea:hover { 
+.kontaktformular textarea:active, .kontaktformular textarea:focus, .kontaktformular textarea:hover {
   background: #D6D633;
 }
-.kontaktformular select:active, .kontaktformular select:focus, .kontaktformular select:hover { 
+.kontaktformular select:active, .kontaktformular select:focus, .kontaktformular select:hover {
   font-size: 14px;
   background: #D6D633;
 }
 
-.kontaktdaten table, .anfrage table { 
-  width:60px; 
+.kontaktdaten table, .anfrage table {
+  width:60px;
   border:0px solid;
 }
 
-.label { 
-  width:120px; 
+.label {
+  width:120px;
   padding:0px;
 }
 
-.error { 
-  width:120px; 
+.error {
+  width:120px;
   padding:0px 0px 0px 5px;
 }
 
-input.errordesignfields, textarea.errordesignfields, select.errordesignfields { 
+input.errordesignfields, textarea.errordesignfields, select.errordesignfields {
   background-color:#E6E6E6;
 }
 
-.buttons input { 
+.buttons input {
   width:60px;
   text-align:center;
   margin-bottom: 0px;
   padding-bottom: 0px;
 }
 
-.buttons input{ 
+.buttons input{
   background: #E6E6E6;
-  font-size: 14px; 
-  border-top:2px solid #fff; 
-  border-left:2px solid #fff; 
-  border-bottom:2px solid #666666; 
+  font-size: 14px;
+  border-top:2px solid #fff;
+  border-left:2px solid #fff;
+  border-bottom:2px solid #666666;
   border-right:2px solid #666666;
 }
-.buttons input:hover{ 
-  background: #D6D633; 
-  border-top:2px solid #ddd; 
-  border-left:2px solid #ddd; 
-  border-bottom:2px solid #fff; 
+.buttons input:hover{
+  background: #D6D633;
+  border-top:2px solid #ddd;
+  border-left:2px solid #ddd;
+  border-bottom:2px solid #fff;
   border-right:2px solid #fff;
+}
+
+.buttonDanke{
+  background: #E6E6E6;
+  font-size: 14px;
+  border-top:2px solid #fff;
+  border-left:2px solid #fff;
+  border-bottom:2px solid #666666;
+  border-right:2px solid #666666;
 }
 
 .pflichtfeld {
    color: #800000;
  }
- 
+
 .zurueck {
   color: #ddd;
 }

@@ -11,9 +11,17 @@
 		    	<legend>Versandbest&auml;tigung</legend>
 					<table>
 						<tr>
-							<td><p>Vielen Dank. Ihre Nachricht wurde erfolgreich &uuml;bermittelt.</p></td>		
+							<td><p>Vielen Dank. Ihre Nachricht wurde erfolgreich &uuml;bermittelt.</p></td>
 						</tr>
 					</table>
 		  		</fieldset><p>
+					<button class="buttonDanke" style="color: black"onClick="back()">Zur&uuml;ck</button>
 		 </div>
+
+		<script>
+			function back(){
+				history.back();
+				console.log("Test");
+			}
+		</script>
 	</body>
