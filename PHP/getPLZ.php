@@ -6,8 +6,8 @@
   $dbname = 'postcodes';
   $key = mysql_real_escape_string($_POST['data']);
 
-  if(!is_numeric($key)){
-    
+  if(!preg_match("/^[a-zA-Z]+$/", $key)){
+
   }
   else{
     $rows = array();
@@ -18,17 +18,10 @@
       echo ("Datenbank nicht verfügbar");
     }
 
-    $sql = "SELECT `ascii` FROM `geoinfo` WHERE plz LIKE '%" . $key ."%'";
+    $sql = "SELECT `plz` FROM `geoinfo` WHERE ascii LIKE '$key'";
 
-    $result = $conn->query($sql);
+    $result = $conn->query($sql)->fetch_object()->plz;
 
-    if ($result){
-
-      while($r = mysqli_fetch_assoc($result)) {
-        $rows[] = $r;
-      }
-    }
-
-    echo(json_encode($rows));
+    echo($result);
   }
 ?>

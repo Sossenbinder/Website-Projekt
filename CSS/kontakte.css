@@ -58,7 +58,6 @@
   background: #D6D633;
 }
 .kontaktformular select:active, .kontaktformular select:focus, .kontaktformular select:hover {
-  font-size: 14px;
   background: #D6D633;
 }
 
@@ -89,6 +88,7 @@ input.errordesignfields, textarea.errordesignfields, select.errordesignfields {
 }
 
 .buttons input{
+  position: relative;
   background: #E6E6E6;
   font-size: 14px;
   border-top:2px solid #fff;
@@ -98,19 +98,22 @@ input.errordesignfields, textarea.errordesignfields, select.errordesignfields {
 }
 .buttons input:hover{
   background: #D6D633;
-  border-top:2px solid #ddd;
-  border-left:2px solid #ddd;
-  border-bottom:2px solid #fff;
-  border-right:2px solid #fff;
+
+  bottom: -1px;
 }
 
 .buttonDanke{
+  position: relative;
   background: #E6E6E6;
-  font-size: 14px;
   border-top:2px solid #fff;
   border-left:2px solid #fff;
   border-bottom:2px solid #666666;
   border-right:2px solid #666666;
+}
+
+.buttonDanke:hover{
+  background: #D6D633;
+  bottom: -1px;
 }
 
 .pflichtfeld {

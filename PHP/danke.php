@@ -15,13 +15,6 @@
 						</tr>
 					</table>
 		  		</fieldset><p>
-					<button class="buttonDanke" style="color: black"onClick="back()">Zur&uuml;ck</button>
+					<a class="buttonDanke" style="color: black; font-size: 16px" href="index.php">Zur&uuml;ck</button>
 		 </div>
-
-		<script>
-			function back(){
-				history.back();
-				console.log("Test");
-			}
-		</script>
 	</body>

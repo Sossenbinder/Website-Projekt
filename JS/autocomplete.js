@@ -1,5 +1,6 @@
 var citydropdown = document.getElementById('cityDropDown');
 var plzfield = document.getElementById('plzField');
+var myRegExp = /^[0-9]+$/;
 
 $(document).ready(function(){
 
@@ -20,10 +21,10 @@ $(document).ready(function(){
 });
 
 function addToOption(element){
-  var optn = document.createElement('option');
-  optn.label = element;
-  optn.value = element;
-  citydropdown.appendChild(optn);
+  var newOption = document.createElement('option');
+  newOption.label = element;
+  newOption.value = element;
+  citydropdown.appendChild(newOption);
 }
 
 function getData(){
@@ -46,6 +47,20 @@ function getData(){
             addToOption(arr[i].ascii[0]+arr[i].ascii.substring(1,arr[i].ascii.length).toLowerCase());
           }
         }
+      }
+    }
+  });
+}
+
+function getPLZ(value){
+  $.ajax({
+    url: "getPLZ.php",
+    data: {data: value},
+    type: "POST",
+    success: function(returndata){
+      console.log(returndata);
+      if(returndata.match(myRegExp)){
+        plzfield.value = returndata;
       }
     }
   });

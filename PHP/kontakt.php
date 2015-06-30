@@ -177,7 +177,7 @@
           <td class="label"><label>Ort: <span class="pflichtfeld">*</span></label></td>
           <td class="field">
             <?php if ($fehler["ort"] != "") { echo $fehler["ort"]; } ?>
-            <input type='text' name="ort" list='cityDropDown' value="<?php echo $ort; ?>">
+            <input type='text' name="ort" list="cityDropDown" id="cityListInput" oninput="getPLZ(document.getElementById('cityListInput').value)" value="<?php echo $ort; ?>">
             <datalist id="cityDropDown">
             </datalist>
         </tr>
