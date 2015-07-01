@@ -32,10 +32,11 @@
 
 .impressum img {
 	align: middle;
-	width: 648px;
+	width: 100%;
 	height: auto;
+	display: block;
 }
- 
+
 .social {
 	width:100%;
 	margin: 5px;

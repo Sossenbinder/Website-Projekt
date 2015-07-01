@@ -1,9 +1,9 @@
     <div class="siteContent">
 	<div class="impressum">
 				<table>
-					<tr> 
-						<td> <img src="../Resources/Pianos/DSC_0226.JPG"> </td>
-						<td> 
+					<tr>
+						<td style="max-width:400px; min-width:300px"> <img src="../Resources/Pianos/DSC_0226.JPG"> </td>
+						<td>
 							<p>
 								<h1>Impressum</h1> <br><br>
 								Piano Manufaktur Lorentz <br><br>
@@ -18,4 +18,3 @@
 				</table>
     </div>
 	</div>
-
