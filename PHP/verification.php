@@ -34,12 +34,8 @@
         $resultnew = $connnew->query($sqlnew);
 
         if($resultnew===TRUE){
-          echo("Success");
+          require("danke.php");
         }
-        else{
-          echo("Fail");
-        }
-
       }
   }
   $connnew->close();
