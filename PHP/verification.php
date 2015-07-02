@@ -11,17 +11,37 @@
     echo ("Datenbank nicht verfügbar");
   }
 
-  $email = mysql_real_escape_string($email);
+  $name = $_GET['name'];
+  $vorname = $_GET['vorname'];
+  $verification = $_GET['verification'];
+
   $name = mysql_real_escape_string($name);
   $vorname = mysql_real_escape_string($vorname);
-  $anrede = mysql_real_escape_string($anrede);
+  $verification = mysql_real_escape_string($verification);
 
-  $sql = "INSERT INTO subscriptiondetails (Email, Nachname, Vorname, Anrede)
-          VALUES ('$email', '$name', '$vorname', '$anrede')";
+  $sql = "SELECT `VerificationCode` FROM `subscriptiondetails` WHERE Vorname LIKE '$vorname' AND Nachname LIKE '$name'";
 
-  if ($conn->query($sql) === TRUE) {
-      echo "<META HTTP-EQUIV=\"refresh\" content=\"0;URL=".$danke."\">";
+  $result = $conn->query($sql);
+
+  if ($result) {
+
+      $resultnew = $result->fetch_object()->VerificationCode;
+
+      if($resultnew == $verification){
+
+        $connnew = new mysqli($servername, $username, $password, $dbname);
+        $sqlnew = "UPDATE subscriptiondetails SET Verifiziert = 1 WHERE VerificationCode = '$verification'";
+        $resultnew = $connnew->query($sqlnew);
+
+        if($resultnew===TRUE){
+          echo("Success");
+        }
+        else{
+          echo("Fail");
+        }
+
+      }
   }
-
+  $connnew->close();
   $conn->close();
 ?>

@@ -16,12 +16,12 @@
   $vorname = mysql_real_escape_string($vorname);
   $anrede = mysql_real_escape_string($anrede);
 
-  $sql = "INSERT INTO subscriptiondetails (Email, Nachname, Vorname, Anrede)
-          VALUES ('$email', '$name', '$vorname', '$anrede')";
+  $sql = "INSERT INTO subscriptiondetails (Email, Nachname, Vorname, Anrede, VerificationCode, Verifiziert)
+          VALUES ('$email', '$name', '$vorname', '$anrede', '$md5hash', '0')";
 
   if ($conn->query($sql) === TRUE) {
       echo "<META HTTP-EQUIV=\"refresh\" content=\"0;URL=".$danke."\">";
   }
-  
+
   $conn->close();
 ?>
