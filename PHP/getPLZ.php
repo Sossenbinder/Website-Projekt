@@ -5,7 +5,7 @@
   $password = 'lorentz1234';
   $dbname = 'postcodes';
   $key = mysql_real_escape_string($_POST['data']);
-
+  
   if(!preg_match("/^[a-zA-Z]+$/", $key)){
 
   }

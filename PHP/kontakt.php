@@ -48,7 +48,7 @@
 
     if(!preg_match("/^[a-zA-Z]+\ +[0-9]+$/", $adresse) && $betreff!='Newsletter') {
       $fehler['adresse']  = "<font color=#cc3333>Geben Sie bitte Ihre
-                      <strong>Adresse</strong> ein.<br /></font>";
+                      <strong>Adresse</strong> im Format 'Straße Hausnummer' ein.<br /></font>";
       unset($anrede);
     }
 
@@ -66,7 +66,7 @@
 
     if (!preg_match("/^\S+@\S+\.\S+$/", $email)) {
       $fehler['email']    = "<font color=#cc3333>Geben Sie bitte Ihre
-                      <strong>E-Mail-Adresse</strong> ein.\n<br /></font>";
+                      <strong>E-Mail-Adresse</strong> im Format 'name@domain.de' ein.\n<br /></font>";
       unset($email);
     }
 
@@ -84,7 +84,7 @@
 
     if(!preg_match("/^[0-9]+\/+[0-9]+$/", $telefon) && $betreff!='Newsletter'){
       $fehler['telefon']   = "<font color=#cc3333>Geben Sie bitte eine
-      <strong>Telefonnummer</strong> ein.<br /></font>";
+      <strong>Telefonnummer</strong> im Format 'Vorwahl/Nachwahl' ein.<br /></font>";
       unset($telefon);
     }
 
@@ -117,12 +117,17 @@
       };
     }
     elseif($anrede && $vorname && $name && $email && $betreff=='Newsletter'){
+
+      $md5hash=md5(uniqid());
+
       include('newsletter.php');
 
       $mail="piano.lorentz@gmail.com";
 
       $nachricht = "Guten Tag ".$anrede." ".$vorname." ".$name.",\n";
-      $nachricht .= "\nVielen Dank fuer ihr Interesse. Ihre Newsletteranmeldung wurde registriert.\n\n";
+      $nachricht .= "\nVielen Dank fuer ihr Interesse. Ihre Newsletteranmeldung wurde registriert.\n";
+      $nachricht .= "\nAllerdings muessen sie ihre Anmeldung noch unter diesem Link verifizieren:\n";
+      $nachricht .= "\n"."http://localhost/Websites/Website-Projekt/PHP/verification.php?name=".$name."&vorname=".$vorname."&verification=".$md5hash."\n";
       $nachricht .= "Mit freundlichen Gruessen,\nPiano Lorentz";
 
       $headers = "From: "." <".$email.">";
@@ -226,9 +231,9 @@
       		<td>
             <select name="betreff" oninput="changeCrucialFields(this.value)">
               <?php if ($fehler["betreff"] != "") { echo 'class="errordesignfields"'; } ?>/>
+              <option value="Angebotsanfrage"<?php if($betreff=="Angebotsanfrage"){ echo "selected";}?>>Angebotsanfrage</option>
               <option value="Newsletter"<?php if($betreff=="Newsletter"){ echo "selected";}?>>Newsletter</option>
               <option value="Infomaterial"<?php if($betreff=="Infomaterial"){ echo "selected";}?>>Infomaterial</option>
-              <option value="Angebotsanfrage"<?php if($betreff=="Angebotsanfrage"){ echo "selected";}?>>Angebotsanfrage</option>
             </select>
           </td>
         </tr>
