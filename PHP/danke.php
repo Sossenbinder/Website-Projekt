@@ -15,6 +15,6 @@
 						</tr>
 					</table>
 		  		</fieldset><p>
-					<a class="buttonDanke" style="color: black; font-size: 16px" href="index.php">Zur&uuml;ck</button>
+					<a class="buttonDanke" style="color: black; font-size: 16px" href="index.php">Zur&uuml;ck</a>
 		 </div>
 	</body>

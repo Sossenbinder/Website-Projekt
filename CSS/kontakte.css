@@ -2,12 +2,13 @@
 .kontaktformular  {
   position:auto;
   left: calc(2.5% - 2px);
+  right: calc(2.5% - 2px);
   border: 3px ridge #D6D633;
   -webkit-box-shadow: 1px -1px 20px -1px rgba(0,0,0,0.75);
   -moz-box-shadow: 1px -1px 20px -1px rgba(0,0,0,0.75);
   box-shadow: 1px -1px 20px -1px rgba(0,0,0,0.75);
   background: gray;
-  width: auto;
+  width: calc(100% - 2% - 40px);
   margin: 10px;
   padding: 10px;
   float: left;
@@ -48,7 +49,8 @@
   background: #E6E6E6;
   padding: 0px 3px;
   margin: 3px 0;
-  width: 120px;
+  width: 95%;
+  max-width: 500px;
 }
 
 .kontaktformular input:active, .kontaktformular input:focus, .kontaktformular input:hover {
@@ -62,7 +64,7 @@
 }
 
 .kontaktdaten table, .anfrage table {
-  width:60px;
+  width:100%;
   border:0px solid;
 }
 

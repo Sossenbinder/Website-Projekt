@@ -96,29 +96,41 @@
 
     if ($anrede && $vorname && $name && $adresse && $ort && $plz && $telefon && $email && $betreff && $nachricht && $betreff!='Newsletter'){
 
-      $mail1="piano.lo";
-      $mail2="rentz@g";
-      $mail3="mail.com";
+      $mail1="piano.lorentz@gmail.com";
 
       $headers = "From: "." <".$email.">";
+      $headers2 = "From: "." <".$mail1.">";
 
       $nachricht .= "\n\n\nBitte melden sie sich bei mir: \n".$adresse." ".$plz." ".$ort."\nOder auch telefonisch: ".$telefon;
       $nachricht .= "\n\nMit freundlichen Grueßen,\n".$anrede." ".$vorname." ".$name;
+
+      $nachricht2 = "Guten Tag ".$anrede." ".$vorname." ".$name.",\n";
+      $nachricht2 .= "\nVielen Dank fuer ihr Interesse. Ihre Email wurde verschickt.\n\n";
+      $nachricht2 .= "Mit freundlichen Gruessen,\nPiano Lorentz";
 
       if($firma){
         $nachricht .= "\nVon der Firma: ".$firma;
       }
 
-      if(mail($mail1.$mail2.$mail3, wordwrap( $betreff, 100, "\n" ), $nachricht, $headers)){
+      if(mail($mail1, $betreff, wordwrap( $nachricht, 100, "\n" ), $headers) && mail($email, $betreff, $nachricht2, $headers2) ){
         echo "<META HTTP-EQUIV=\"refresh\" content=\"0;URL=".$danke."\">";
       };
     }
     elseif($anrede && $vorname && $name && $email && $betreff=='Newsletter'){
       include('newsletter.php');
+
+      $mail="piano.lorentz@gmail.com";
+
+      $nachricht = "Guten Tag ".$anrede." ".$vorname." ".$name.",\n";
+      $nachricht .= "\nVielen Dank fuer ihr Interesse. Ihre Newsletteranmeldung wurde registriert.\n\n";
+      $nachricht .= "Mit freundlichen Gruessen,\nPiano Lorentz";
+
+      $headers = "From: "." <".$email.">";
+
+      mail($mail, $betreff, wordwrap( $nachricht, 100, "\n" ), $headers);
     }
   }
 ?>
-
 <div class="kontaktformular" id="ktf">
   <link rel="stylesheet" type="text/css" href="../CSS/general.css">
   <link rel="stylesheet" type="text/css" href="../CSS/kontakte.css">
@@ -143,8 +155,7 @@
 		    <tr>
 		      <td class="label"><label>Vorname: <span class="pflichtfeld">*</span></label></td>
           <td class="field"><?php if ($fehler["vorname"] != "") { echo $fehler["vorname"];} ?>
-            <input type="text" name="vorname" maxlength="<?php echo $zeichenlaenge_vorname; ?>" value="<?php echo $vorname; ?>"
-            <?php if($fehler["vorname"] != "") {echo 'class="errordesignfields"';} ?>/>
+            <input type="text" name="vorname" maxlength="<?php echo $zeichenlaenge_vorname; ?>" value="<?php echo $vorname; ?>"/>
           </td>
 		    </tr>
 
@@ -152,29 +163,28 @@
           <td class="label"><label>Nachname: <span class="pflichtfeld">*</span></label></td>
           <td class="field">
             <?php if($fehler["name"] != "") { echo $fehler["name"];} ?>
-            <input type="text" name="name" maxlength="<?php echo $zeichenlaenge_name; ?>" id="textfield" value="<?php echo $name; ?>"
-            <?php if ($fehler["name"] != "") { echo 'class="errordesignfields"'; } ?>/>
+            <input type="text" name="name" maxlength="<?php echo $zeichenlaenge_name; ?>" id="textfield" value="<?php echo $name; ?>"/>
           </td>
 		    </tr>
 
         <tr>
-          <td class="label"><label>Adresse: <span class="pflichtfeld">*</span></label></td>
+          <td class="label"><label>Adresse: <span class="pflichtfeld" id="pflichtfeldAdresse">*</span></label></td>
           <td class="field">
             <?php if ($fehler["adresse"] != "") { echo $fehler["adresse"]; } ?>
-            <input type="text" name="adresse" maxlength="<?php echo $zeichenlaenge_email; ?>" value="<?php echo $adresse; ?>"
-            <?php if ($fehler["adresse"] != "") { echo 'class="errordesignfields"'; } ?>/></td>
+            <input type="text" name="adresse" maxlength="<?php echo $zeichenlaenge_email; ?>" value="<?php echo $adresse; ?>"/>
+          </td>
         </tr>
 
         <tr>
-          <td class="label"><label>PLZ: <span class="pflichtfeld">*</span></label></td>
+          <td class="label"><label>PLZ: <span class="pflichtfeld" id="pflichtfeldPLZ">*</span></label></td>
           <td class="field">
             <?php if ($fehler["plz"] != "") { echo $fehler["plz"]; } ?>
-            <input type="text" id="plzField" name="plz" maxlength="<?php echo $zeichenlaenge_plz; ?>" value="<?php echo $plz; ?>"
-            <?php if ($fehler["plz"] != "") { echo 'class="errordesignfields"'; } ?>/></td>
+            <input type="text" id="plzField" name="plz" maxlength="<?php echo $zeichenlaenge_plz; ?>" value="<?php echo $plz; ?>"/>
+          </td>
         </tr>
 
         <tr>
-          <td class="label"><label>Ort: <span class="pflichtfeld">*</span></label></td>
+          <td class="label"><label>Ort: <span class="pflichtfeld" id="pflichtfeldOrt">*</span></label></td>
           <td class="field">
             <?php if ($fehler["ort"] != "") { echo $fehler["ort"]; } ?>
             <input type='text' name="ort" list="cityDropDown" id="cityListInput" oninput="getPLZ(document.getElementById('cityListInput').value)" value="<?php echo $ort; ?>">
@@ -183,11 +193,11 @@
         </tr>
 
         <tr>
-          <td class="label"><label>Telefon: <span class="pflichtfeld">*</span></label></td>
+          <td class="label"><label>Telefon: <span class="pflichtfeld" id="pflichtfeldTelefon">*</span></label></td>
           <td class="field">
              <?php if ($fehler["telefon"] != "") { echo $fehler["telefon"]; } ?>
-            <input type="text" name="telefon" maxlength="<?php echo $zeichenlaenge_telefon; ?>" value="<?php echo $telefon; ?>"
-            <?php if ($fehler["telefon"] != "") { echo 'class="errordesignfields"'; } ?>/></td>
+            <input type="text" name="telefon" maxlength="<?php echo $zeichenlaenge_telefon; ?>" value="<?php echo $telefon; ?>"/>
+          </td>
           </td>
         </tr>
 
@@ -195,8 +205,8 @@
     			<td class="label"><label>E-Mail: <span class="pflichtfeld">*</span></label></td>
     			<td class="field">
             <?php if ($fehler["email"] != "") { echo $fehler["email"]; } ?>
-            <input type="text" name="email" maxlength="<?php echo $zeichenlaenge_email; ?>" value="<?php echo $email; ?>"
-            <?php if ($fehler["email"] != "") { echo 'class="errordesignfields"'; } ?>/></td>
+            <input type="text" name="email" maxlength="<?php echo $zeichenlaenge_email; ?>" value="<?php echo $email; ?>"/>
+            </td>
     		</tr>
 
         <tr>
@@ -214,33 +224,21 @@
       	<tr>
       		<td class="label"><label>Betreff: <span class="pflichtfeld">*</span></label></td>
       		<td>
-            <select name="betreff">
+            <select name="betreff" oninput="changeCrucialFields(this.value)">
               <?php if ($fehler["betreff"] != "") { echo 'class="errordesignfields"'; } ?>/>
-              <option selected="selected" value="0"></option>
               <option value="Newsletter"<?php if($betreff=="Newsletter"){ echo "selected";}?>>Newsletter</option>
               <option value="Infomaterial"<?php if($betreff=="Infomaterial"){ echo "selected";}?>>Infomaterial</option>
               <option value="Angebotsanfrage"<?php if($betreff=="Angebotsanfrage"){ echo "selected";}?>>Angebotsanfrage</option>
-
-              <?php if ($fehler["betreff"] != "") { echo 'class="errordesignfields"'; } ?>/>
             </select>
           </td>
         </tr>
 
       	<tr>
-       		<td class="label"><label>Nachricht: <span class="pflichtfeld">*</span></label></td>
-       		<td class="field"><?php if ($fehler["nachricht"] != "") { echo $fehler["nachricht"]; } ?><textarea name="nachricht" cols="30" rows="6" <?php if ($fehler["nachricht"] != "") { echo 'class="errordesignfields"'; } ?>><?php echo $_POST[nachricht]; ?></textarea></td>
+       		<td class="label"><label>Nachricht: <span class="pflichtfeld" id="pflichtfeldNachricht">*</span></label></td>
+       		<td class="field"><?php if ($fehler["nachricht"] != "") { echo $fehler["nachricht"]; } ?><textarea name="nachricht" cols="30" rows="6" style="margin: 3px 0px; height:90px; width: 95%; resize:none" <?php if ($fehler["nachricht"] != "") { echo 'class="errordesignfields"'; } ?>><?php echo $_POST[nachricht]; ?></textarea></td>
       	</tr>
       </table>
     </fieldset>
-
-    <?php
-      for ($i=0; $i < $cfg['NUM_ATTACHMENT_FIELDS']; $i++) {
-        echo '<fieldset class="upload">';
-        echo '<legend>Dateianhang</legend>';
-        echo '<label>Datei</label><input type="file" size="12" name="f[]" /><br />';
-        echo '</fieldset>';
-      }
-    ?>
 
     <fieldset class="buttons">
       <legend>Ihre Aktion</legend>
@@ -252,3 +250,29 @@
     </fieldset>
   </form>
 </div>
+
+<script>
+  function changeCrucialFields(value){
+
+    var adresse = document.getElementById("pflichtfeldAdresse");
+    var plz = document.getElementById("pflichtfeldPLZ");
+    var ort = document.getElementById("pflichtfeldOrt");
+    var telefon = document.getElementById("pflichtfeldTelefon");
+    var nachricht = document.getElementById("pflichtfeldNachricht");
+
+    if(value==="Newsletter"){
+      adresse.innerHTML = "";
+      plz.innerHTML = "";
+      ort.innerHTML = "";
+      telefon.innerHTML = "";
+      nachricht.innerHTML = "";
+    }
+    else{
+      adresse.innerHTML = "*";
+      plz.innerHTML = "*";
+      ort.innerHTML = "*";
+      telefon.innerHTML = "*";
+      nachricht.innerHTML = "*";
+    }
+  }
+</script>
