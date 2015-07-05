@@ -10,11 +10,10 @@
   			<img src="../Resources/Pictures/klavierhaus.jpg"> <br /> <br />
   			Hier finden Pianisten aller Art, was ihr Herz begehrt: eine Auswahl an Klavieren, Fl&uumlgeln und speziellen Tasteninstrumenten zum kleinen Preis! <br />
   			<br />
-  			Bla bla bla...
   		</p>
   	</div>
 
-	<div class="social">  	
+	<div class="social">
 		<div class="socialHead">
 		<h1>Neuigkeiten von unseren Social-Sites:</h1>
 		<hr>

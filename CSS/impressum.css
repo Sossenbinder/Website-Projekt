@@ -1,5 +1,5 @@
 .impressum {
-	width:95%;
+	width:calc(105% - 13px);
 	height:50%;
 	text-align: center;
 	margin:10px;
@@ -12,7 +12,7 @@
 	font-variant: normal;
 	font-weight: bold;
 	line-height: 45.5999984741211px;
-  	color: #B2B2B2;
+  color: #B2B2B2;
  	text-shadow: 2px 1px 1px #000;
 }
 
@@ -21,7 +21,7 @@
 	font-size: 32px;
 	width: 95%;
 	font-variant: normal;
-	color: #B2B2B2;
+	color: black;
 	text-align: center;
 	border: none;
 }
@@ -31,38 +31,6 @@
 }
 
 .impressum img {
-	align: middle;
 	width: 100%;
-	height: auto;
-	display: block;
-}
-
-.social {
-	width:100%;
-	margin: 5px;
-}
-
-.social h1{
-	font-family: Candara, Calibri, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
-
-  	color: #404040;
-}
-
-.social hr {
-	width:98%;
-	color: #222;
-	border-color: solid #222;
-	background-color: solid #222;
-}
-
-.twitterTimeline, .googlePosts, .facebookFeed {
-	width:30%;
-	margin:10px 1% 0 1%;
-	float:left;
-	text-align: center;
-	overflow: auto;
-}
-
-.googlePost {
-	float:left;
+	height: 800px;
 }

@@ -82,7 +82,8 @@ tr{
   border: 1px ridge black;
   border-radius: 4px;
 
-  top: 150%;
+  top: 160%;
+  left: 0px;
   width: 300px;
   height: 40px;
 }
@@ -105,26 +106,27 @@ tr{
   border: 1px ridge black;
   border-radius: 4px;
 
-  top: 180%;
+  top: 190%;
+  left: 0px;
   width: 256px;
   height: 40px;
 }
 
 .orderButtonSteinway:active{
 
-  top: calc(150% + 1px);
+  top: calc(160% + 1px);
 }
 
 .orderButtonZenti:active{
 
-  top: calc(180% + 1px);
+  top: calc(190% + 1px);
 }
 
 .orderButtonSpanSteinway{
 
   position: absolute;
   top: 12%;
-  left: 27%;
+  left: 22%;
   text-align: center;
 
   color: lightgrey;
@@ -135,7 +137,7 @@ tr{
 
   position: absolute;
   top: 12%;
-  left: 24%;
+  left: 18%;
   text-align: center;
 
   color: lightgrey;

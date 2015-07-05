@@ -264,7 +264,7 @@
     var ort = document.getElementById("pflichtfeldOrt");
     var telefon = document.getElementById("pflichtfeldTelefon");
     var nachricht = document.getElementById("pflichtfeldNachricht");
-
+    
     if(value==="Newsletter"){
       adresse.innerHTML = "";
       plz.innerHTML = "";
