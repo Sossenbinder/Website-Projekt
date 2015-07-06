@@ -150,7 +150,6 @@
           <td class="field">
             <?php if ($fehler["anrede"] != "") { echo $fehler["anrede"]; } ?>
             <select style="width: 70px;" name="anrede" <?php if ($fehler["anrede"] != "") { echo 'class="errordesignfields"'; } ?>>
-              <option selected="selected" value="0"></option>
               <option value="Herr" <?php if($anrede=="Herr"){ echo "selected";}?>>Herr</option>
               <option value="Frau" <?php if($anrede=="Frau"){ echo "selected";}?>>Frau</option>
             </select>
@@ -264,7 +263,7 @@
     var ort = document.getElementById("pflichtfeldOrt");
     var telefon = document.getElementById("pflichtfeldTelefon");
     var nachricht = document.getElementById("pflichtfeldNachricht");
-    
+
     if(value==="Newsletter"){
       adresse.innerHTML = "";
       plz.innerHTML = "";

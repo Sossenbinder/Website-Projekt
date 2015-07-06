@@ -19,25 +19,14 @@
   $vorname = mysql_real_escape_string($vorname);
   $verification = mysql_real_escape_string($verification);
 
-  $sql = "SELECT `VerificationCode` FROM `subscriptiondetails` WHERE Vorname LIKE '$vorname' AND Nachname LIKE '$name'";
+  $connnew = new mysqli($servername, $username, $password, $dbname);
+  $sqlnew = "UPDATE subscriptiondetails SET Verifiziert = 1 WHERE VerificationCode = '$verification'";
+  $resultnew = $connnew->query($sqlnew);
 
-  $result = $conn->query($sql);
-
-  if ($result) {
-
-      $resultnew = $result->fetch_object()->VerificationCode;
-
-      if($resultnew == $verification){
-
-        $connnew = new mysqli($servername, $username, $password, $dbname);
-        $sqlnew = "UPDATE subscriptiondetails SET Verifiziert = 1 WHERE VerificationCode = '$verification'";
-        $resultnew = $connnew->query($sqlnew);
-
-        if($resultnew===TRUE){
-          require("danke.php");
-        }
-      }
+  if($resultnew===TRUE){
+    require("danke.php");
   }
+
   $connnew->close();
   $conn->close();
 ?>

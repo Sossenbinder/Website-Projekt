@@ -10,8 +10,7 @@
 						K&oumlnigsbaupassagen <br><br>
 						K&oumlnigstra&szlige 28 <br><br>
 						71073 Stuttgart <br><br>
-						Kontakt: info@piano-lorentz.de <br><br>
-						0711.2825585 <br><br>
+						Kontakt: piano.lorentz@gmail.com <br><br>
 					</p>
 				</td>
 			</tr>
