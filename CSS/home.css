@@ -7,7 +7,7 @@
 }
 
 .welcome h1 {
-	font-family: Candara, Calibri, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+	font-family: "Century Gothic",Candara, Calibri, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
 	font-size: 54px;
 	font-style: italic;
 	font-variant: normal;
@@ -28,7 +28,7 @@
 }
 
 .social h1{
-	font-family: Candara, Calibri, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+	font-family: "Century Gothic", Candara, Calibri, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
 
   	color: #404040;
 }
