@@ -5,10 +5,10 @@
 	<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
 
   	<div class="welcome">
-  		<h1>Wilkommen bei Piano Lorentz!</h1>
+  		<h1>Willkommen bei Piano Lorentz!</h1>
   		<p>
   			<img src="../Resources/Pictures/klavierhaus.jpg"> <br /> <br />
-  			Hier finden Pianisten aller Art, was ihr Herz begehrt: eine Auswahl an Klavieren, Fl&uumlgeln und speziellen Tasteninstrumenten zum kleinen Preis! <br />
+  			Hier finden Pianisten aller Art, was ihr Herz begehrt: eine Auswahl an Klavieren, Fl&uumlgeln und speziellen Tasteninstrumenten zum kleinen Preis!<br />
   			<br />
   		</p>
   	</div>
