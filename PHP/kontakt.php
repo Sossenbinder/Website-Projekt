@@ -49,7 +49,7 @@
     if(!preg_match("/^[a-zA-Z]+\ +[0-9]+$/", $adresse) && $betreff!='Newsletter') {
       $fehler['adresse']  = "<font color=#cc3333>Geben Sie bitte Ihre
                       <strong>Adresse</strong> im Format 'Straße Hausnummer' ein.<br /></font>";
-      unset($anrede);
+      unset($adresse);
     }
 
     if(!preg_match("/^[0-9]+$/", $plz) && $betreff!='Newsletter') {
