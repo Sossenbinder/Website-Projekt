@@ -13,7 +13,7 @@
       <p> Mit einer H&oumlhe von 132cm, einer Breite von 152,5cm und einem Gewicht von 305kg bietet sich dieses Piano vor allem f&uumlr beschr&aumlnkt gro&szlige Wohnungen an.</p>
     </div>
     <a href="index.php?page=steinwayK132" class="productInformation"><span><i>Mehr Informationen zu diesem Produkt</i></span></a>
-    <img src="../Resources/Pianos/steinwayK132.png" alt="Konnte nicht geladen werden">
+    <img src="../Resources/Pianos/steinwayK132.jpg" alt="Konnte nicht geladen werden">
   </div>
 
   <hr>
@@ -26,7 +26,7 @@
       <p> Das Holz des Resonanzbodens hat den gr&ouml&szligten Einfluss auf den Klang eines Fl&uumlgels. Daher werden diese H&oumllzer nach strengen Regeln und Normen von den erfahrensten Handwerkern ausgew&aumlhlt, um sowohl satte, tiefe B&aumlsse als auch brillante anhaltende T&oumlne in hohen Tonlagen zu erreichen.</p>
     </div>
     <a href="index.php?page=fluegelP3201" class="productInformation"><span><i>Mehr Informationen zu diesem Produkt</i></span></a>
-    <img src="../Resources/Pianos/Fluegel.png" alt="Konnte nicht geladen werden">
+    <img src="../Resources/Pianos/Fluegel.jpg" alt="Konnte nicht geladen werden">
   </div>
   <hr>
   <div class="product">
@@ -59,7 +59,7 @@
       <p>Auch dieses Modell von Yamaha ist eines der Vertreter der digitalen Klaviere, und pr&auml;sentiert sich vor allem in Sachen Gr&ouml;&szlig;e, Preis und Klangqualit&auml;t als sehr gut. Wer sich also für eine andere Art des Klavierspielens interessiert, sollte sich dieses Produkt durchaus genauer ansehen.</p>
     </div>
     <a href="index.php?page=clavinova" class="productInformation"><span><i>Mehr Informationen zu diesem Produkt</i></span></a>
-    <img src="../Resources/Pianos/Clavinova.png" alt="Konnte nicht geladen werden">
+    <img src="../Resources/Pianos/Clavinova.jpg" alt="Konnte nicht geladen werden">
   </div>
   <hr>
   <div class="product">
@@ -72,7 +72,7 @@
       <p>Essex sind eher solche Klaviermodelle, die vom Preis und von der Gr&ouml;&szlig;e weniger an professionelle Spieler und stattdessen mehr an Spieler gerichtet sind, die keine professionellen Konzerte, sondern lieber privat zu Hause spielen - an leidenschaftliche Klavierliebhaber also.</p>
     </div>
     <a href="index.php?page=essex" class="productInformation"><span><i>Mehr Informationen zu diesem Produkt</i></span></a>
-    <img src="../Resources/Pianos/Essex_EGP-173.png" alt="Konnte nicht geladen werden">
+    <img src="../Resources/Pianos/Essex_EGP-173.jpg" alt="Konnte nicht geladen werden">
   </div>
 
 </div>
