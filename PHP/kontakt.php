@@ -115,8 +115,10 @@
       if(mail($mail1, $betreff, wordwrap( $nachricht, 100, "\n" ), $headers) && mail($email, $betreff, $nachricht2, $headers2) ){
         echo "<META HTTP-EQUIV=\"refresh\" content=\"0;URL=".$danke."\">";
       };
+    
     }
-    elseif($anrede && $vorname && $name && $email && $betreff=='Newsletter'){
+    
+    elseif($anrede && $vorname && $name && $email && $betreff=='Newsletter') {
 
       $md5hash=md5(uniqid());
 
@@ -136,6 +138,7 @@
     }
   }
 ?>
+
 <div class="kontaktformular" id="ktf">
   <link rel="stylesheet" type="text/css" href="../CSS/general.css">
   <link rel="stylesheet" type="text/css" href="../CSS/kontakte.css">
@@ -239,7 +242,8 @@
 
       	<tr>
        		<td class="label"><label>Nachricht: <span class="pflichtfeld" id="pflichtfeldNachricht">*</span></label></td>
-       		<td class="field"><?php if ($fehler["nachricht"] != "") { echo $fehler["nachricht"]; } ?><textarea name="nachricht" cols="30" rows="6" style="margin: 3px 0px; height:90px; width: 95%; resize:none" <?php if ($fehler["nachricht"] != "") { echo 'class="errordesignfields"'; } ?>><?php echo $_POST[nachricht]; ?></textarea></td>
+       		<td class="field"><?php if ($fehler["nachricht"] != "") { echo $fehler["nachricht"]; } ?>
+            <textarea name="nachricht" cols="30" rows="6" <?php if ($fehler["nachricht"] != "") { echo 'class="errordesignfields"'; } ?>><?php echo $_POST[nachricht]; ?></textarea></td>
       	</tr>
       </table>
     </fieldset>
@@ -254,6 +258,8 @@
     </fieldset>
   </form>
 </div>
+
+<img src="../Resources/Pianos/DSC_0208.JPG">
 
 <script>
   function changeCrucialFields(value){
