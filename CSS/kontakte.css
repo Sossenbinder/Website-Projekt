@@ -1,6 +1,6 @@
 
 .kontaktformular  {
-  position:auto;
+  position: auto;
   left: calc(2.5% - 2px);
   right: calc(2.5% - 2px);
   border: 3px ridge #D6D633;
@@ -8,8 +8,9 @@
   -moz-box-shadow: 1px -1px 20px -1px rgba(0,0,0,0.75);
   box-shadow: 1px -1px 20px -1px rgba(0,0,0,0.75);
   background: gray;
-  width: calc(100% - 2% - 40px);
-  margin: 10px;
+  width: 40%;
+  min-width: 300px;
+  margin: 10px 10px 10px 10px;
   padding: 10px;
   float: left;
   clear: both;
@@ -33,12 +34,25 @@
   text-transform: uppercase;
 }
 
-.kontaktformular label {
-  width: 90px;
+.kontaktformular label{
   float: left;
-  clear: both;
-  padding: 3px 10px;
+  padding: 2px 10px;
   margin: 2px 0;
+  width: 100%;
+  min-width: 100px;
+}
+
+/*
+.anfrage label {
+  width: 90%;
+  max-width: 390px;
+  min-width: 100px;
+}
+*/
+
+.kontaktdaten table, .anfrage table {
+  width: 100%;
+  min-width: 90px;
 }
 
 .kontaktformular input, .kontaktformular textarea, .kontaktformular select {
@@ -48,48 +62,37 @@
   border-top: 1px solid #666666;
   background: #E6E6E6;
   padding: 0px 3px;
-  margin: 3px 0;
-  width: 95%;
-  max-width: 500px;
+  margin: 3px 3px 3px 3px;
+  width: 92%;
+  min-width: 90px;
 }
 
 .kontaktformular input:active, .kontaktformular input:focus, .kontaktformular input:hover {
   background: #D6D633;
 }
+
 .kontaktformular textarea:active, .kontaktformular textarea:focus, .kontaktformular textarea:hover {
   background: #D6D633;
 }
+
 .kontaktformular select:active, .kontaktformular select:focus, .kontaktformular select:hover {
   background: #D6D633;
 }
 
-.kontaktdaten table, .anfrage table {
-  width:100%;
-  border:0px solid;
-}
-
-.label {
-  width:120px;
-  padding:0px;
-}
-
 .error {
-  width:120px;
-  padding:0px 0px 0px 5px;
+  width: 120px;
+  padding: 0px 0px 0px 5px;
 }
 
 input.errordesignfields, textarea.errordesignfields, select.errordesignfields {
-  background-color:#E6E6E6;
+  background-color: #E6E6E6;
 }
 
 .buttons input {
-  width:60px;
-  text-align:center;
-  margin-bottom: 0px;
+  width: 25%;
+  text-align: center;
+  margin-top: 10px;
   padding-bottom: 0px;
-}
-
-.buttons input{
   position: relative;
   background: #E6E6E6;
   font-size: 14px;
@@ -98,9 +101,9 @@ input.errordesignfields, textarea.errordesignfields, select.errordesignfields {
   border-bottom:2px solid #666666;
   border-right:2px solid #666666;
 }
+
 .buttons input:hover{
   background: #D6D633;
-
   bottom: -1px;
 }
 
@@ -125,3 +128,17 @@ input.errordesignfields, textarea.errordesignfields, select.errordesignfields {
 .zurueck {
   color: #ddd;
 }
+
+.siteContent img {
+  position: relative;
+  width: auto;
+  height: auto;
+  max-width: 400px; 
+  min-width: 100px;
+  min-height: 40px;
+  box-shadow: 1px -1px 20px -1px rgba(0,0,0,0.75);
+  border: 3px ridge #D6D633;
+  -webkit-box-shadow: 1px -1px 20px -1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 1px -1px 20px -1px rgba(0,0,0,0.75);
+   margin: 10% 5% 5% 10%;
+} 
