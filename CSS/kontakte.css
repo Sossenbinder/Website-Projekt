@@ -133,12 +133,13 @@ input.errordesignfields, textarea.errordesignfields, select.errordesignfields {
   position: relative;
   width: auto;
   height: auto;
-  max-width: 400px; 
+  max-width: 400px;
   min-width: 100px;
   min-height: 40px;
   box-shadow: 1px -1px 20px -1px rgba(0,0,0,0.75);
   border: 3px ridge #D6D633;
   -webkit-box-shadow: 1px -1px 20px -1px rgba(0,0,0,0.75);
   -moz-box-shadow: 1px -1px 20px -1px rgba(0,0,0,0.75);
-   margin: 10% 5% 5% 10%;
-} 
+  left: 70px;
+  top: 70px;
+}
