@@ -115,9 +115,9 @@
       if(mail($mail1, $betreff, wordwrap( $nachricht, 100, "\n" ), $headers) && mail($email, $betreff, $nachricht2, $headers2) ){
         echo "<META HTTP-EQUIV=\"refresh\" content=\"0;URL=".$danke."\">";
       };
-    
+
     }
-    
+
     elseif($anrede && $vorname && $name && $email && $betreff=='Newsletter') {
 
       $md5hash=md5(uniqid());
@@ -129,7 +129,7 @@
       $nachricht = "Guten Tag ".$anrede." ".$vorname." ".$name.",\n";
       $nachricht .= "\nVielen Dank fuer ihr Interesse. Ihre Newsletteranmeldung wurde registriert.\n";
       $nachricht .= "\nAllerdings muessen sie ihre Anmeldung noch unter diesem Link verifizieren:\n";
-      $nachricht .= "\n"."http://localhost/Websites/Website-Projekt/PHP/verification.php?name=".$name."&vorname=".$vorname."&verification=".$md5hash."\n";
+      $nachricht .= "\n"."http://localhost/Websites/Website-Projekt/PHP/verification.php?verification=".$md5hash."\n";
       $nachricht .= "Mit freundlichen Gruessen,\nPiano Lorentz";
 
       $headers = "From: "." <".$email.">";

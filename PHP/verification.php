@@ -11,12 +11,8 @@
     echo ("Datenbank nicht verfügbar");
   }
 
-  $name = $_GET['name'];
-  $vorname = $_GET['vorname'];
   $verification = $_GET['verification'];
 
-  $name = mysql_real_escape_string($name);
-  $vorname = mysql_real_escape_string($vorname);
   $verification = mysql_real_escape_string($verification);
 
   $connnew = new mysqli($servername, $username, $password, $dbname);
