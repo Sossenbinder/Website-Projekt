@@ -18,6 +18,7 @@
 
       <div class="contentParent">
         <?php
+          <!-- Je nach Parameter wird hier auf eine andere Seite verwießen -->
           if (!isset($_GET['page'])) {
             include('home.php');
           } else {

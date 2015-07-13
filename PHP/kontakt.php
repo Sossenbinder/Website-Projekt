@@ -3,12 +3,15 @@
 <?php
   error_reporting(E_ERROR | E_PARSE);
 
+  //Bindet sie config.php ein
   @require('config.php');
 
+  //Löscht die Werte bei entsprechendem Parameter
   if ($_POST['delete']) {
     unset($_POST);
   }
 
+  //Setzt die Werte aus dem $_POST Array auf entsprechende Variablen
   if ($_POST["kf-km"]) {
     $anrede         = $_POST["anrede"];
     $vorname        = $_POST["vorname"];
@@ -28,6 +31,7 @@
     $betreff        = stripslashes($betreff);
     $nachricht      = stripslashes($nachricht);
 
+    //Dieser komplette Block dient der Sicherheitsüberprüfung und der Fehleranzeige
     if (!$anrede == "Herr" || !$anrede == "Frau") {
       $fehler['anrede']   = "<font color=#cc3333>Bitte w&auml;hlen Sie eine
                       <strong>Anrede</strong> aus.<br /></font>";
@@ -94,6 +98,7 @@
       }
     }
 
+    //Falls die Vorraussetzungen für Infomaterial / Angebotsanfrage stimmen, wird hier die Email zusammengesetzt und abgeschickt.
     if ($anrede && $vorname && $name && $adresse && $ort && $plz && $telefon && $email && $betreff && $nachricht && $betreff!='Newsletter'){
 
       $mail1="piano.lorentz@gmail.com";
@@ -108,16 +113,19 @@
       $nachricht2 .= "\nVielen Dank fuer ihr Interesse. Ihre Email wurde verschickt.\n\n";
       $nachricht2 .= "Mit freundlichen Gruessen,\nPiano Lorentz";
 
+      //Wenn Firma gesetzt ist, wird diese noch angefügt am Ende
       if($firma){
         $nachricht .= "\nVon der Firma: ".$firma;
       }
 
+      //Schickt die Mail ab und leitet den Nutzer auf eine Bestätigungsseite um
       if(mail($mail1, $betreff, wordwrap( $nachricht, 100, "\n" ), $headers) && mail($email, $betreff, $nachricht2, $headers2) ){
         echo "<META HTTP-EQUIV=\"refresh\" content=\"0;URL=".$danke."\">";
       };
 
     }
 
+    //Wenn die Vorraussetzungen für eine Newsletteranmeldung gegeben ist.
     elseif($anrede && $vorname && $name && $email && $betreff=='Newsletter') {
 
       $md5hash=md5(uniqid());
@@ -129,6 +137,7 @@
       $nachricht = "Guten Tag ".$anrede." ".$vorname." ".$name.",\n";
       $nachricht .= "\nVielen Dank fuer ihr Interesse. Ihre Newsletteranmeldung wurde registriert.\n";
       $nachricht .= "\nAllerdings muessen sie ihre Anmeldung noch unter diesem Link verifizieren:\n";
+      //Setzt eine Email zusammen mit dem entsprechend generierten MD5Hash, der in der Datenbank abgespeichert ist.
       $nachricht .= "\n"."http://localhost/Websites/Website-Projekt/PHP/verification.php?verification=".$md5hash."\n";
       $nachricht .= "Mit freundlichen Gruessen,\nPiano Lorentz";
 
@@ -143,16 +152,20 @@
   <link rel="stylesheet" type="text/css" href="../CSS/general.css">
   <link rel="stylesheet" type="text/css" href="../CSS/kontakte.css">
 
+  <!-- Initiert das Form-Tag und gibt die Adresse an, an die die Daten geschickt werden -->
   <form action="<?php $_SERVER['PHP_SELF'];?>" method="post" enctype="multipart/form-data">
 
     <fieldset class="kontaktdaten">
       <legend>Kontaktdaten</legend>
       <table>
 		    <tr>
+          <!-- Gibt den Namen und - falls Pflichtfeld - einen Stern als Markierung an -->
           <td class="label"><label>Anrede: <span class="pflichtfeld">*</span></label></td>
           <td class="field">
+            <!-- Wenn weiter oben im Code ein Fehler generiert wurde, wird er hier eingefügt -->
             <?php if ($fehler["anrede"] != "") { echo $fehler["anrede"]; } ?>
             <select style="width: 70px;" name="anrede" <?php if ($fehler["anrede"] != "") { echo 'class="errordesignfields"'; } ?>>
+              <!-- Wenn ein Wert aus den Optionen vorliegt, wird dieser als "selected" markiert -->
               <option value="Herr" <?php if($anrede=="Herr"){ echo "selected";}?>>Herr</option>
               <option value="Frau" <?php if($anrede=="Frau"){ echo "selected";}?>>Frau</option>
             </select>
@@ -262,6 +275,9 @@
 <img src="../Resources/Pianos/DSC_0208.JPG">
 
 <script>
+
+  //Je nach Auswahl im Dropdown (Angebotsanfrage / Newsletter / Infomaterial)
+  //werden die Pflichtfeldmarkierungen angepasst
   function changeCrucialFields(value){
 
     var adresse = document.getElementById("pflichtfeldAdresse");
