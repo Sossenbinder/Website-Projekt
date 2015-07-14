@@ -244,7 +244,7 @@
       	<tr>
       		<td class="label"><label>Betreff: <span class="pflichtfeld">*</span></label></td>
       		<td>
-            <select name="betreff" oninput="changeCrucialFields(this.value)">
+            <select name="betreff" onchange="changeCrucialFields(this.value)">
               <?php if ($fehler["betreff"] != "") { echo 'class="errordesignfields"'; } ?>/>
               <option value="Angebotsanfrage"<?php if($betreff=="Angebotsanfrage"){ echo "selected";}?>>Angebotsanfrage</option>
               <option value="Newsletter"<?php if($betreff=="Newsletter"){ echo "selected";}?>>Newsletter</option>
